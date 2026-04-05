@@ -29,10 +29,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ballast-lane-board.slnx
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build ballast-lane-board.slnx --no-restore --configuration Release
 
   unit-tests:
     name: Unit Tests
@@ -50,10 +50,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ballast-lane-board.slnx
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build ballast-lane-board.slnx --no-restore --configuration Release
 
       - name: Run Domain Unit Tests
         run: dotnet test tests/BallastLaneBoard.Domain.UnitTests/ --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory coverage/domain --logger "trx;LogFileName=domain-tests.trx"
@@ -92,10 +92,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ballast-lane-board.slnx
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build ballast-lane-board.slnx --no-restore --configuration Release
 
       - name: Verify Docker availability
         run: |
@@ -281,10 +281,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ballast-lane-board.slnx
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build ballast-lane-board.slnx --configuration Release --no-restore
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
