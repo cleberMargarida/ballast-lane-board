@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  id: BallastLaneBoard.Application.Identity
+  children:
+  - BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  - BallastLaneBoard.Application.Identity.IUserUoW
+  - BallastLaneBoard.Application.Identity.UserService
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Application
+references:
+- uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  commentId: T:BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.IIdentityProviderClient.html
+  name: IIdentityProviderClient
+  nameWithType: IIdentityProviderClient
+  fullName: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+- uid: BallastLaneBoard.Application.Identity.IUserUoW
+  commentId: T:BallastLaneBoard.Application.Identity.IUserUoW
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.IUserUoW.html
+  name: IUserUoW
+  nameWithType: IUserUoW
+  fullName: BallastLaneBoard.Application.Identity.IUserUoW
+- uid: BallastLaneBoard.Application.Identity.UserService
+  commentId: T:BallastLaneBoard.Application.Identity.UserService
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: BallastLaneBoard.Application.Identity.UserService
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html

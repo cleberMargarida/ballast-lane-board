@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskError
+  id: TaskError
+  parent: BallastLaneBoard.Domain.TaskManagement
+  children:
+  - BallastLaneBoard.Domain.TaskManagement.TaskError.DescriptionTooLong
+  - BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidDueDate
+  - BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidStatusTransition
+  - BallastLaneBoard.Domain.TaskManagement.TaskError.NotOwner
+  - BallastLaneBoard.Domain.TaskManagement.TaskError.TitleRequired
+  langs:
+  - csharp
+  - vb
+  name: TaskError
+  nameWithType: TaskError
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError
+  type: Enum
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: TaskError
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: public enum TaskError
+    content.vb: Public Enum TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError.TitleRequired
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskError.TitleRequired
+  id: TitleRequired
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskError
+  langs:
+  - csharp
+  - vb
+  name: TitleRequired
+  nameWithType: TaskError.TitleRequired
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError.TitleRequired
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: TitleRequired
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: TitleRequired = 0
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidStatusTransition
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidStatusTransition
+  id: InvalidStatusTransition
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskError
+  langs:
+  - csharp
+  - vb
+  name: InvalidStatusTransition
+  nameWithType: TaskError.InvalidStatusTransition
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidStatusTransition
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: InvalidStatusTransition
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 9
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: InvalidStatusTransition = 1
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError.NotOwner
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskError.NotOwner
+  id: NotOwner
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskError
+  langs:
+  - csharp
+  - vb
+  name: NotOwner
+  nameWithType: TaskError.NotOwner
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError.NotOwner
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: NotOwner
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 12
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: NotOwner = 2
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidDueDate
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidDueDate
+  id: InvalidDueDate
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskError
+  langs:
+  - csharp
+  - vb
+  name: InvalidDueDate
+  nameWithType: TaskError.InvalidDueDate
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError.InvalidDueDate
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: InvalidDueDate
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 15
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: InvalidDueDate = 3
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError.DescriptionTooLong
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskError.DescriptionTooLong
+  id: DescriptionTooLong
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskError
+  langs:
+  - csharp
+  - vb
+  name: DescriptionTooLong
+  nameWithType: TaskError.DescriptionTooLong
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError.DescriptionTooLong
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: DescriptionTooLong
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskError.cs
+    startLine: 18
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: DescriptionTooLong = 4
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskError
+references:
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskError
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskError.html
+  name: TaskError
+  nameWithType: TaskError
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError

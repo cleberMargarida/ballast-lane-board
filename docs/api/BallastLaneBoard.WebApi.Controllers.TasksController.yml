@@ -1,0 +1,990 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController
+  commentId: T:BallastLaneBoard.WebApi.Controllers.TasksController
+  id: TasksController
+  parent: BallastLaneBoard.WebApi.Controllers
+  children:
+  - BallastLaneBoard.WebApi.Controllers.TasksController.#ctor(BallastLaneBoard.Application.TaskManagement.TaskService)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest,System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.Create(BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest,System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.Delete(System.Guid,System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.GetAll(System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.GetById(System.Guid,System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.TasksController.Update(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: TasksController
+  nameWithType: TasksController
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: TasksController
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Task CRUD operations. All endpoints require authentication.
+  example: []
+  syntax:
+    content: >-
+      [ApiController]
+
+      [Route("api/[controller]")]
+
+      [Authorize]
+
+      public class TasksController : ApiControllerBase
+    content.vb: >-
+      <ApiController>
+
+      <Route("api/[controller]")>
+
+      <Authorize>
+
+      Public Class TasksController Inherits ApiControllerBase
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.Mvc.ControllerBase
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  inheritedMembers:
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{{T}})
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{{T}},System.String,System.Object)
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: api/[controller]
+  - type: Microsoft.AspNetCore.Authorization.AuthorizeAttribute
+    ctor: Microsoft.AspNetCore.Authorization.AuthorizeAttribute.#ctor
+    arguments: []
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.#ctor(BallastLaneBoard.Application.TaskManagement.TaskService)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.#ctor(BallastLaneBoard.Application.TaskManagement.TaskService)
+  id: '#ctor(BallastLaneBoard.Application.TaskManagement.TaskService)'
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: TasksController(TaskService)
+  nameWithType: TasksController.TasksController(TaskService)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.TasksController(BallastLaneBoard.Application.TaskManagement.TaskService)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Task CRUD operations. All endpoints require authentication.
+  example: []
+  syntax:
+    content: public TasksController(TaskService taskService)
+    parameters:
+    - id: taskService
+      type: BallastLaneBoard.Application.TaskManagement.TaskService
+    content.vb: Public Sub New(taskService As TaskService)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.#ctor*
+  nameWithType.vb: TasksController.New(TaskService)
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.TasksController.New(BallastLaneBoard.Application.TaskManagement.TaskService)
+  name.vb: New(TaskService)
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.GetAll(System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.GetAll(System.Threading.CancellationToken)
+  id: GetAll(System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: GetAll(CancellationToken)
+  nameWithType: TasksController.GetAll(CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.GetAll(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: GetAll
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 18
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Lists all tasks for the current user. Admins see all tasks.
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      public Task<IActionResult> GetAll(CancellationToken ct)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpGet>
+
+      Public Function GetAll(ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.GetAll*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.GetById(System.Guid,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.GetById(System.Guid,System.Threading.CancellationToken)
+  id: GetById(System.Guid,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: GetById(Guid, CancellationToken)
+  nameWithType: TasksController.GetById(Guid, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.GetById(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: GetById
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 27
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Gets a specific task by ID.
+  example: []
+  syntax:
+    content: >-
+      [HttpGet("{taskId:guid}")]
+
+      public Task<IActionResult> GetById(Guid taskId, CancellationToken ct)
+    parameters:
+    - id: taskId
+      type: System.Guid
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpGet("{taskId:guid}")>
+
+      Public Function GetById(taskId As Guid, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.GetById*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{taskId:guid}'
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Create(BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.Create(BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest,System.Threading.CancellationToken)
+  id: Create(BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: Create(CreateTaskRequest, CancellationToken)
+  nameWithType: TasksController.Create(CreateTaskRequest, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Create(BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Create
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 37
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Creates a new task for the authenticated user.
+  example: []
+  syntax:
+    content: >-
+      [HttpPost]
+
+      public Task<IActionResult> Create(CreateTaskRequest request, CancellationToken ct)
+    parameters:
+    - id: request
+      type: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpPost>
+
+      Public Function Create(request As CreateTaskRequest, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.Create*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
+    arguments: []
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Update(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.Update(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest,System.Threading.CancellationToken)
+  id: Update(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: Update(Guid, UpdateTaskRequest, CancellationToken)
+  nameWithType: TasksController.Update(Guid, UpdateTaskRequest, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Update(System.Guid, BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Update
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 47
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Updates an existing task.
+  example: []
+  syntax:
+    content: >-
+      [HttpPut("{taskId:guid}")]
+
+      public Task<IActionResult> Update(Guid taskId, UpdateTaskRequest request, CancellationToken ct)
+    parameters:
+    - id: taskId
+      type: System.Guid
+    - id: request
+      type: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpPut("{taskId:guid}")>
+
+      Public Function Update(taskId As Guid, request As UpdateTaskRequest, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.Update*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPutAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{taskId:guid}'
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest,System.Threading.CancellationToken)
+  id: ChangeStatus(System.Guid,BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: ChangeStatus(Guid, ChangeTaskStatusRequest, CancellationToken)
+  nameWithType: TasksController.ChangeStatus(Guid, ChangeTaskStatusRequest, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus(System.Guid, BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: ChangeStatus
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 57
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Changes the status of a task.
+  example: []
+  syntax:
+    content: >-
+      [HttpPatch("{taskId:guid}/status")]
+
+      public Task<IActionResult> ChangeStatus(Guid taskId, ChangeTaskStatusRequest request, CancellationToken ct)
+    parameters:
+    - id: taskId
+      type: System.Guid
+    - id: request
+      type: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpPatch("{taskId:guid}/status")>
+
+      Public Function ChangeStatus(taskId As Guid, request As ChangeTaskStatusRequest, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPatchAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPatchAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{taskId:guid}/status'
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Delete(System.Guid,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.TasksController.Delete(System.Guid,System.Threading.CancellationToken)
+  id: Delete(System.Guid,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Guid, CancellationToken)
+  nameWithType: TasksController.Delete(Guid, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Delete(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Delete
+    path: ../src/BallastLaneBoard.WebApi/Controllers/TasksController.cs
+    startLine: 67
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Deletes a task.
+  example: []
+  syntax:
+    content: >-
+      [HttpDelete("{taskId:guid}")]
+
+      public Task<IActionResult> Delete(Guid taskId, CancellationToken ct)
+    parameters:
+    - id: taskId
+      type: System.Guid
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpDelete("{taskId:guid}")>
+
+      Public Function Delete(taskId As Guid, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.TasksController.Delete*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{taskId:guid}'
+references:
+- uid: BallastLaneBoard.WebApi.Controllers
+  commentId: N:BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.WebApi.Controllers
+  nameWithType: BallastLaneBoard.WebApi.Controllers
+  fullName: BallastLaneBoard.WebApi.Controllers
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase
+  commentId: T:Microsoft.AspNetCore.Mvc.ControllerBase
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: ControllerBase
+  nameWithType: ControllerBase
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  commentId: T:BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  parent: BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html
+  name: ApiControllerBase
+  nameWithType: ApiControllerBase
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{{T}})
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  definition: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  name: OkOrBadRequest<T>(Result<T>)
+  nameWithType: ApiControllerBase.OkOrBadRequest<T>(Result<T>)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>)
+  nameWithType.vb: ApiControllerBase.OkOrBadRequest(Of T)(Result(Of T))
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T))
+  name.vb: OkOrBadRequest(Of T)(Result(Of T))
+  spec.csharp:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+    name: OkOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+    name: OkOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_NoContentOrBadRequest_BallastLaneBoard_Domain_Core_Result_
+  name: NoContentOrBadRequest(Result)
+  nameWithType: ApiControllerBase.NoContentOrBadRequest(Result)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  spec.csharp:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+    name: NoContentOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_NoContentOrBadRequest_BallastLaneBoard_Domain_Core_Result_
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result
+    name: Result
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+    name: NoContentOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_NoContentOrBadRequest_BallastLaneBoard_Domain_Core_Result_
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result
+    name: Result
+  - name: )
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{{T}},System.String,System.Object)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  definition: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  name: CreatedAtOrBadRequest<T>(Result<T>, string, object)
+  nameWithType: ApiControllerBase.CreatedAtOrBadRequest<T>(Result<T>, string, object)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>, string, object)
+  nameWithType.vb: ApiControllerBase.CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T), String, Object)
+  name.vb: CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+  spec.csharp:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+    name: CreatedAtOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+    name: CreatedAtOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.Mvc
+  commentId: N:Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc
+  nameWithType: Microsoft.AspNetCore.Mvc
+  fullName: Microsoft.AspNetCore.Mvc
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  name: OkOrBadRequest<T>(Result<T>)
+  nameWithType: ApiControllerBase.OkOrBadRequest<T>(Result<T>)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>)
+  nameWithType.vb: ApiControllerBase.OkOrBadRequest(Of T)(Result(Of T))
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T))
+  name.vb: OkOrBadRequest(Of T)(Result(Of T))
+  spec.csharp:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+    name: OkOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+    name: OkOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  isExternal: true
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  name: CreatedAtOrBadRequest<T>(Result<T>, string, object)
+  nameWithType: ApiControllerBase.CreatedAtOrBadRequest<T>(Result<T>, string, object)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>, string, object)
+  nameWithType.vb: ApiControllerBase.CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T), String, Object)
+  name.vb: CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+  spec.csharp:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+    name: CreatedAtOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+    name: CreatedAtOrBadRequest
+    href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.#ctor*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.#ctor
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController__ctor_BallastLaneBoard_Application_TaskManagement_TaskService_
+  name: TasksController
+  nameWithType: TasksController.TasksController
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.TasksController
+  nameWithType.vb: TasksController.New
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.TasksController.New
+  name.vb: New
+- uid: BallastLaneBoard.Application.TaskManagement.TaskService
+  commentId: T:BallastLaneBoard.Application.TaskManagement.TaskService
+  parent: BallastLaneBoard.Application.TaskManagement
+  href: BallastLaneBoard.Application.TaskManagement.TaskService.html
+  name: TaskService
+  nameWithType: TaskService
+  fullName: BallastLaneBoard.Application.TaskManagement.TaskService
+- uid: BallastLaneBoard.Application.TaskManagement
+  commentId: N:BallastLaneBoard.Application.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement
+  nameWithType: BallastLaneBoard.Application.TaskManagement
+  fullName: BallastLaneBoard.Application.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.GetAll*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.GetAll
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_GetAll_System_Threading_CancellationToken_
+  name: GetAll
+  nameWithType: TasksController.GetAll
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.GetAll
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  commentId: T:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    isExternal: true
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.GetById*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.GetById
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_GetById_System_Guid_System_Threading_CancellationToken_
+  name: GetById
+  nameWithType: TasksController.GetById
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.GetById
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Create*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.Create
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_Create_BallastLaneBoard_Application_TaskManagement_Models_CreateTaskRequest_System_Threading_CancellationToken_
+  name: Create
+  nameWithType: TasksController.Create
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Create
+- uid: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest.html
+  name: CreateTaskRequest
+  nameWithType: CreateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Update*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.Update
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_Update_System_Guid_BallastLaneBoard_Application_TaskManagement_Models_UpdateTaskRequest_System_Threading_CancellationToken_
+  name: Update
+  nameWithType: TasksController.Update
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Update
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html
+  name: UpdateTaskRequest
+  nameWithType: UpdateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_ChangeStatus_System_Guid_BallastLaneBoard_Application_TaskManagement_Models_ChangeTaskStatusRequest_System_Threading_CancellationToken_
+  name: ChangeStatus
+  nameWithType: TasksController.ChangeStatus
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.ChangeStatus
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.html
+  name: ChangeTaskStatusRequest
+  nameWithType: ChangeTaskStatusRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController.Delete*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.TasksController.Delete
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html#BallastLaneBoard_WebApi_Controllers_TasksController_Delete_System_Guid_System_Threading_CancellationToken_
+  name: Delete
+  nameWithType: TasksController.Delete
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController.Delete

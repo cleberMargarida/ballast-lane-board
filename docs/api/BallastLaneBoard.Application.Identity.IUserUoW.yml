@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.IUserUoW
+  commentId: T:BallastLaneBoard.Application.Identity.IUserUoW
+  id: IUserUoW
+  parent: BallastLaneBoard.Application.Identity
+  children:
+  - BallastLaneBoard.Application.Identity.IUserUoW.Users
+  langs:
+  - csharp
+  - vb
+  name: IUserUoW
+  nameWithType: IUserUoW
+  fullName: BallastLaneBoard.Application.Identity.IUserUoW
+  type: Interface
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/IUserUoW.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: IUserUoW
+    path: ../src/BallastLaneBoard.Application/Identity/IUserUoW.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  syntax:
+    content: 'public interface IUserUoW : IUnitOfWork'
+    content.vb: Public Interface IUserUoW Inherits IUnitOfWork
+  inheritedMembers:
+  - BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  - BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+- uid: BallastLaneBoard.Application.Identity.IUserUoW.Users
+  commentId: P:BallastLaneBoard.Application.Identity.IUserUoW.Users
+  id: Users
+  parent: BallastLaneBoard.Application.Identity.IUserUoW
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: IUserUoW.Users
+  fullName: BallastLaneBoard.Application.Identity.IUserUoW.Users
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/IUserUoW.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Users
+    path: ../src/BallastLaneBoard.Application/Identity/IUserUoW.cs
+    startLine: 7
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  syntax:
+    content: IRepository<AppUser> Users { get; }
+    parameters: []
+    return:
+      type: BallastLaneBoard.Application.Abstractions.IRepository{BallastLaneBoard.Domain.Identity.AppUser}
+    content.vb: ReadOnly Property Users As IRepository(Of AppUser)
+  overload: BallastLaneBoard.Application.Identity.IUserUoW.Users*
+references:
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  commentId: M:BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  parent: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit
+  name: Commit()
+  nameWithType: IUnitOfWork.Commit()
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit()
+  spec.csharp:
+  - uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+    name: Commit
+    href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+    name: Commit
+    href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit
+  - name: (
+  - name: )
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  isExternal: true
+  href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit_System_Threading_CancellationToken_
+  name: Commit(CancellationToken)
+  nameWithType: IUnitOfWork.Commit(CancellationToken)
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+    name: Commit
+    href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+    name: Commit
+    href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+  - name: )
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  commentId: T:BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  parent: BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+- uid: BallastLaneBoard.Application.Identity.IUserUoW.Users*
+  commentId: Overload:BallastLaneBoard.Application.Identity.IUserUoW.Users
+  href: BallastLaneBoard.Application.Identity.IUserUoW.html#BallastLaneBoard_Application_Identity_IUserUoW_Users
+  name: Users
+  nameWithType: IUserUoW.Users
+  fullName: BallastLaneBoard.Application.Identity.IUserUoW.Users
+- uid: BallastLaneBoard.Application.Abstractions.IRepository{BallastLaneBoard.Domain.Identity.AppUser}
+  commentId: T:BallastLaneBoard.Application.Abstractions.IRepository{BallastLaneBoard.Domain.Identity.AppUser}
+  parent: BallastLaneBoard.Application.Abstractions
+  definition: BallastLaneBoard.Application.Abstractions.IRepository`1
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  name: IRepository<AppUser>
+  nameWithType: IRepository<AppUser>
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<BallastLaneBoard.Domain.Identity.AppUser>
+  nameWithType.vb: IRepository(Of AppUser)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of BallastLaneBoard.Domain.Identity.AppUser)
+  name.vb: IRepository(Of AppUser)
+  spec.csharp:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: <
+  - uid: BallastLaneBoard.Domain.Identity.AppUser
+    name: AppUser
+    href: BallastLaneBoard.Domain.Identity.AppUser.html
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BallastLaneBoard.Domain.Identity.AppUser
+    name: AppUser
+    href: BallastLaneBoard.Domain.Identity.AppUser.html
+  - name: )
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+  commentId: T:BallastLaneBoard.Application.Abstractions.IRepository`1
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

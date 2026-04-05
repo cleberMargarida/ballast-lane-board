@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.TaskManagement
+  commentId: N:BallastLaneBoard.Application.TaskManagement
+  id: BallastLaneBoard.Application.TaskManagement
+  children:
+  - BallastLaneBoard.Application.TaskManagement.ITaskUoW
+  - BallastLaneBoard.Application.TaskManagement.TaskService
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Application.TaskManagement
+  nameWithType: BallastLaneBoard.Application.TaskManagement
+  fullName: BallastLaneBoard.Application.TaskManagement
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Application
+references:
+- uid: BallastLaneBoard.Application.TaskManagement.ITaskUoW
+  commentId: T:BallastLaneBoard.Application.TaskManagement.ITaskUoW
+  parent: BallastLaneBoard.Application.TaskManagement
+  href: BallastLaneBoard.Application.TaskManagement.ITaskUoW.html
+  name: ITaskUoW
+  nameWithType: ITaskUoW
+  fullName: BallastLaneBoard.Application.TaskManagement.ITaskUoW
+- uid: BallastLaneBoard.Application.TaskManagement.TaskService
+  commentId: T:BallastLaneBoard.Application.TaskManagement.TaskService
+  parent: BallastLaneBoard.Application.TaskManagement
+  href: BallastLaneBoard.Application.TaskManagement.TaskService.html
+  name: TaskService
+  nameWithType: TaskService
+  fullName: BallastLaneBoard.Application.TaskManagement.TaskService
+- uid: BallastLaneBoard.Application.TaskManagement
+  commentId: N:BallastLaneBoard.Application.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement
+  nameWithType: BallastLaneBoard.Application.TaskManagement
+  fullName: BallastLaneBoard.Application.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html

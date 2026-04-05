@@ -1,0 +1,415 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse
+  commentId: T:BallastLaneBoard.Application.Identity.Models.UserResponse
+  id: UserResponse
+  parent: BallastLaneBoard.Application.Identity.Models
+  children:
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.Identity.UserRole,System.DateTimeOffset,System.DateTimeOffset)
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+  - BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+  langs:
+  - csharp
+  - vb
+  name: UserResponse
+  nameWithType: UserResponse
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UserResponse
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public sealed record UserResponse
+    content.vb: Public NotInheritable Class UserResponse
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.Identity.UserRole,System.DateTimeOffset,System.DateTimeOffset)
+  commentId: M:BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.Identity.UserRole,System.DateTimeOffset,System.DateTimeOffset)
+  id: '#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.Identity.UserRole,System.DateTimeOffset,System.DateTimeOffset)'
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: UserResponse(Guid, string, string, UserRole, DateTimeOffset, DateTimeOffset)
+  nameWithType: UserResponse.UserResponse(Guid, string, string, UserRole, DateTimeOffset, DateTimeOffset)
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.UserResponse(System.Guid, string, string, BallastLaneBoard.Domain.Identity.UserRole, System.DateTimeOffset, System.DateTimeOffset)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public UserResponse(Guid Id, string Username, string Email, UserRole Role, DateTimeOffset CreatedAt, DateTimeOffset LastSeenAt)
+    parameters:
+    - id: Id
+      type: System.Guid
+    - id: Username
+      type: System.String
+    - id: Email
+      type: System.String
+    - id: Role
+      type: BallastLaneBoard.Domain.Identity.UserRole
+    - id: CreatedAt
+      type: System.DateTimeOffset
+    - id: LastSeenAt
+      type: System.DateTimeOffset
+    content.vb: Public Sub New(Id As Guid, Username As String, Email As String, Role As UserRole, CreatedAt As DateTimeOffset, LastSeenAt As DateTimeOffset)
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor*
+  nameWithType.vb: UserResponse.New(Guid, String, String, UserRole, DateTimeOffset, DateTimeOffset)
+  fullName.vb: BallastLaneBoard.Application.Identity.Models.UserResponse.New(System.Guid, String, String, BallastLaneBoard.Domain.Identity.UserRole, System.DateTimeOffset, System.DateTimeOffset)
+  name.vb: New(Guid, String, String, UserRole, DateTimeOffset, DateTimeOffset)
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+  id: Id
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UserResponse.Id
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Id
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 7
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public Guid Id { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.Id*
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+  id: Username
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: UserResponse.Username
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Username
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public string Username { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.Username*
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+  id: Email
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: UserResponse.Email
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Email
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 9
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public string Email { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.Email*
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+  id: Role
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: UserResponse.Role
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Role
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public UserRole Role { get; init; }
+    parameters: []
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserRole
+    content.vb: Public Property Role As UserRole
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.Role*
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+  id: CreatedAt
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: UserResponse.CreatedAt
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: CreatedAt
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 11
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public DateTimeOffset CreatedAt { get; init; }
+    parameters: []
+    return:
+      type: System.DateTimeOffset
+    content.vb: Public Property CreatedAt As DateTimeOffset
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt*
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt
+  commentId: P:BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt
+  id: LastSeenAt
+  parent: BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: LastSeenAt
+  nameWithType: UserResponse.LastSeenAt
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: LastSeenAt
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 12
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public DateTimeOffset LastSeenAt { get; init; }
+    parameters: []
+    return:
+      type: System.DateTimeOffset
+    content.vb: Public Property LastSeenAt As DateTimeOffset
+  overload: BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt*
+references:
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.#ctor
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse__ctor_System_Guid_System_String_System_String_BallastLaneBoard_Domain_Identity_UserRole_System_DateTimeOffset_System_DateTimeOffset_
+  name: UserResponse
+  nameWithType: UserResponse.UserResponse
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.UserResponse
+  nameWithType.vb: UserResponse.New
+  fullName.vb: BallastLaneBoard.Application.Identity.Models.UserResponse.New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BallastLaneBoard.Domain.Identity.UserRole
+  commentId: T:BallastLaneBoard.Domain.Identity.UserRole
+  parent: BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.Domain.Identity.UserRole.html
+  name: UserRole
+  nameWithType: UserRole
+  fullName: BallastLaneBoard.Domain.Identity.UserRole
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: BallastLaneBoard.Domain.Identity
+  commentId: N:BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Identity
+  nameWithType: BallastLaneBoard.Domain.Identity
+  fullName: BallastLaneBoard.Domain.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Id*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_Id
+  name: Id
+  nameWithType: UserResponse.Id
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Id
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Username*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_Username
+  name: Username
+  nameWithType: UserResponse.Username
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Username
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Email*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_Email
+  name: Email
+  nameWithType: UserResponse.Email
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Email
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.Role*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_Role
+  name: Role
+  nameWithType: UserResponse.Role
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.Role
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_CreatedAt
+  name: CreatedAt
+  nameWithType: UserResponse.CreatedAt
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.CreatedAt
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html#BallastLaneBoard_Application_Identity_Models_UserResponse_LastSeenAt
+  name: LastSeenAt
+  nameWithType: UserResponse.LastSeenAt
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse.LastSeenAt

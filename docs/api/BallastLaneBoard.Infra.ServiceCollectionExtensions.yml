@@ -1,0 +1,261 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Infra.ServiceCollectionExtensions
+  commentId: T:BallastLaneBoard.Infra.ServiceCollectionExtensions
+  id: ServiceCollectionExtensions
+  parent: BallastLaneBoard.Infra
+  children:
+  - BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})
+  - BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: BallastLaneBoard.Infra.ServiceCollectionExtensions
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: ServiceCollectionExtensions
+    path: ../src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+    startLine: 9
+  assemblies:
+  - BallastLaneBoard.Infra
+  namespace: BallastLaneBoard.Infra
+  syntax:
+    content: public static class ServiceCollectionExtensions
+    content.vb: Public Module ServiceCollectionExtensions
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  commentId: M:BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  id: AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)
+  isExtensionMethod: true
+  parent: BallastLaneBoard.Infra.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddInfraServices(IServiceCollection, string)
+  nameWithType: ServiceCollectionExtensions.AddInfraServices(IServiceCollection, string)
+  fullName: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, string)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: AddInfraServices
+    path: ../src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+    startLine: 11
+  assemblies:
+  - BallastLaneBoard.Infra
+  namespace: BallastLaneBoard.Infra
+  syntax:
+    content: public static IServiceCollection AddInfraServices(this IServiceCollection services, string connectionString)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: connectionString
+      type: System.String
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddInfraServices(services As IServiceCollection, connectionString As String) As IServiceCollection
+  overload: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices*
+  nameWithType.vb: ServiceCollectionExtensions.AddInfraServices(IServiceCollection, String)
+  fullName.vb: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, String)
+  name.vb: AddInfraServices(IServiceCollection, String)
+- uid: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})
+  commentId: M:BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})
+  id: AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder})
+  isExtensionMethod: true
+  parent: BallastLaneBoard.Infra.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddInfraServices(IServiceCollection, Action<DbContextOptionsBuilder>)
+  nameWithType: ServiceCollectionExtensions.AddInfraServices(IServiceCollection, Action<DbContextOptionsBuilder>)
+  fullName: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<Microsoft.EntityFrameworkCore.DbContextOptionsBuilder>)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: AddInfraServices
+    path: ../src/BallastLaneBoard.Infra/ServiceCollectionExtensions.cs
+    startLine: 16
+  assemblies:
+  - BallastLaneBoard.Infra
+  namespace: BallastLaneBoard.Infra
+  syntax:
+    content: public static IServiceCollection AddInfraServices(this IServiceCollection services, Action<DbContextOptionsBuilder> configureDbContext)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: configureDbContext
+      type: System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddInfraServices(services As IServiceCollection, configureDbContext As Action(Of DbContextOptionsBuilder)) As IServiceCollection
+  overload: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices*
+  nameWithType.vb: ServiceCollectionExtensions.AddInfraServices(IServiceCollection, Action(Of DbContextOptionsBuilder))
+  fullName.vb: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Microsoft.EntityFrameworkCore.DbContextOptionsBuilder))
+  name.vb: AddInfraServices(IServiceCollection, Action(Of DbContextOptionsBuilder))
+references:
+- uid: BallastLaneBoard.Infra
+  commentId: N:BallastLaneBoard.Infra
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Infra
+  nameWithType: BallastLaneBoard.Infra
+  fullName: BallastLaneBoard.Infra
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Infra
+    name: Infra
+    href: BallastLaneBoard.Infra.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Infra
+    name: Infra
+    href: BallastLaneBoard.Infra.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices*
+  commentId: Overload:BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices
+  href: BallastLaneBoard.Infra.ServiceCollectionExtensions.html#BallastLaneBoard_Infra_ServiceCollectionExtensions_AddInfraServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_
+  name: AddInfraServices
+  nameWithType: ServiceCollectionExtensions.AddInfraServices
+  fullName: BallastLaneBoard.Infra.ServiceCollectionExtensions.AddInfraServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder}
+  commentId: T:System.Action{Microsoft.EntityFrameworkCore.DbContextOptionsBuilder}
+  parent: System
+  definition: System.Action`1
+  name: Action<DbContextOptionsBuilder>
+  nameWithType: Action<DbContextOptionsBuilder>
+  fullName: System.Action<Microsoft.EntityFrameworkCore.DbContextOptionsBuilder>
+  nameWithType.vb: Action(Of DbContextOptionsBuilder)
+  fullName.vb: System.Action(Of Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+  name.vb: Action(Of DbContextOptionsBuilder)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.EntityFrameworkCore.DbContextOptionsBuilder
+    name: DbContextOptionsBuilder
+    isExternal: true
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

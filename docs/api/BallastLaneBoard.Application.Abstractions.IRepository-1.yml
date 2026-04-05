@@ -1,0 +1,340 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+  commentId: T:BallastLaneBoard.Application.Abstractions.IRepository`1
+  id: IRepository`1
+  parent: BallastLaneBoard.Application.Abstractions
+  children:
+  - BallastLaneBoard.Application.Abstractions.IRepository`1.Add(`0)
+  - BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync(System.Guid,System.Threading.CancellationToken)
+  - BallastLaneBoard.Application.Abstractions.IRepository`1.Remove(`0)
+  langs:
+  - csharp
+  - vb
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>
+  type: Interface
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: IRepository
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 17
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  summary: Generic repository providing basic data access operations for entities identified by a GUID.
+  example: []
+  syntax:
+    content: 'public interface IRepository<TEntity> where TEntity : IEntity<Guid>'
+    typeParameters:
+    - id: TEntity
+    content.vb: Public Interface IRepository(Of TEntity As IEntity(Of Guid))
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.Add(`0)
+  commentId: M:BallastLaneBoard.Application.Abstractions.IRepository`1.Add(`0)
+  id: Add(`0)
+  parent: BallastLaneBoard.Application.Abstractions.IRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Add(TEntity)
+  nameWithType: IRepository<TEntity>.Add(TEntity)
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.Add(TEntity)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Add
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 20
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: TEntity Add(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+    return:
+      type: '{TEntity}'
+    content.vb: Function Add(entity As TEntity) As TEntity
+  overload: BallastLaneBoard.Application.Abstractions.IRepository`1.Add*
+  nameWithType.vb: IRepository(Of TEntity).Add(TEntity)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).Add(TEntity)
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.Remove(`0)
+  commentId: M:BallastLaneBoard.Application.Abstractions.IRepository`1.Remove(`0)
+  id: Remove(`0)
+  parent: BallastLaneBoard.Application.Abstractions.IRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(TEntity)
+  nameWithType: IRepository<TEntity>.Remove(TEntity)
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.Remove(TEntity)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Remove
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 22
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: TEntity Remove(TEntity entity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+    return:
+      type: '{TEntity}'
+    content.vb: Function Remove(entity As TEntity) As TEntity
+  overload: BallastLaneBoard.Application.Abstractions.IRepository`1.Remove*
+  nameWithType.vb: IRepository(Of TEntity).Remove(TEntity)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).Remove(TEntity)
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync(System.Guid,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync(System.Guid,System.Threading.CancellationToken)
+  id: FindAsync(System.Guid,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Abstractions.IRepository`1
+  langs:
+  - csharp
+  - vb
+  name: FindAsync(Guid, CancellationToken)
+  nameWithType: IRepository<TEntity>.FindAsync(Guid, CancellationToken)
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.FindAsync(System.Guid, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: FindAsync
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 24
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: ValueTask<TEntity?> FindAsync(Guid id, CancellationToken cancellationToken)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.ValueTask{{TEntity}}
+    content.vb: Function FindAsync(id As Guid, cancellationToken As CancellationToken) As ValueTask(Of TEntity)
+  overload: BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync*
+  nameWithType.vb: IRepository(Of TEntity).FindAsync(Guid, CancellationToken)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).FindAsync(System.Guid, System.Threading.CancellationToken)
+references:
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.Add*
+  commentId: Overload:BallastLaneBoard.Application.Abstractions.IRepository`1.Add
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html#BallastLaneBoard_Application_Abstractions_IRepository_1_Add__0_
+  name: Add
+  nameWithType: IRepository<TEntity>.Add
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.Add
+  nameWithType.vb: IRepository(Of TEntity).Add
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).Add
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.Remove*
+  commentId: Overload:BallastLaneBoard.Application.Abstractions.IRepository`1.Remove
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html#BallastLaneBoard_Application_Abstractions_IRepository_1_Remove__0_
+  name: Remove
+  nameWithType: IRepository<TEntity>.Remove
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.Remove
+  nameWithType.vb: IRepository(Of TEntity).Remove
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).Remove
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync*
+  commentId: Overload:BallastLaneBoard.Application.Abstractions.IRepository`1.FindAsync
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html#BallastLaneBoard_Application_Abstractions_IRepository_1_FindAsync_System_Guid_System_Threading_CancellationToken_
+  name: FindAsync
+  nameWithType: IRepository<TEntity>.FindAsync
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>.FindAsync
+  nameWithType.vb: IRepository(Of TEntity).FindAsync
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity).FindAsync
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.ValueTask{{TEntity}}
+  commentId: T:System.Threading.Tasks.ValueTask{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  name: ValueTask<TEntity>
+  nameWithType: ValueTask<TEntity>
+  fullName: System.Threading.Tasks.ValueTask<TEntity>
+  nameWithType.vb: ValueTask(Of TEntity)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TEntity)
+  name.vb: ValueTask(Of TEntity)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

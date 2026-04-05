@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  id: TaskItemStatus
+  parent: BallastLaneBoard.Domain.TaskManagement
+  children:
+  - BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Completed
+  - BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.InProgress
+  - BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Pending
+  langs:
+  - csharp
+  - vb
+  name: TaskItemStatus
+  nameWithType: TaskItemStatus
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  type: Enum
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: TaskItemStatus
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+    startLine: 2
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: public enum TaskItemStatus
+    content.vb: Public Enum TaskItemStatus
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Pending
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Pending
+  id: Pending
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  langs:
+  - csharp
+  - vb
+  name: Pending
+  nameWithType: TaskItemStatus.Pending
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Pending
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Pending
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: Pending = 0
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.InProgress
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.InProgress
+  id: InProgress
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  langs:
+  - csharp
+  - vb
+  name: InProgress
+  nameWithType: TaskItemStatus.InProgress
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.InProgress
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: InProgress
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: InProgress = 1
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Completed
+  commentId: F:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Completed
+  id: Completed
+  parent: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: TaskItemStatus.Completed
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.Completed
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Completed
+    path: ../src/BallastLaneBoard.Domain/TaskManagement/TaskItemStatus.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.TaskManagement
+  syntax:
+    content: Completed = 2
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+references:
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.html
+  name: TaskItemStatus
+  nameWithType: TaskItemStatus
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus

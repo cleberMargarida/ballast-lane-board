@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.Core.IEntity
+  commentId: T:BallastLaneBoard.Domain.Core.IEntity
+  id: IEntity
+  parent: BallastLaneBoard.Domain.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IEntity
+  nameWithType: IEntity
+  fullName: BallastLaneBoard.Domain.Core.IEntity
+  type: Interface
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Core/IEntity.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: IEntity
+    path: ../src/BallastLaneBoard.Domain/Core/IEntity.cs
+    startLine: 2
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Core
+  syntax:
+    content: 'public interface IEntity : IEntity<Guid>'
+    content.vb: Public Interface IEntity Inherits IEntity(Of Guid)
+  derivedClasses:
+  - BallastLaneBoard.Domain.Identity.AppUser
+  - BallastLaneBoard.Domain.TaskManagement.TaskItem
+  inheritedMembers:
+  - BallastLaneBoard.Domain.Core.IEntity{System.Guid}.Id
+references:
+- uid: BallastLaneBoard.Domain.Core
+  commentId: N:BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Core
+  nameWithType: BallastLaneBoard.Domain.Core
+  fullName: BallastLaneBoard.Domain.Core
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html
+- uid: BallastLaneBoard.Domain.Core.IEntity{System.Guid}.Id
+  commentId: P:BallastLaneBoard.Domain.Core.IEntity{System.Guid}.Id
+  parent: BallastLaneBoard.Domain.Core.IEntity{System.Guid}
+  definition: BallastLaneBoard.Domain.Core.IEntity`1.Id
+  href: BallastLaneBoard.Domain.Core.IEntity-1.html#BallastLaneBoard_Domain_Core_IEntity_1_Id
+  name: Id
+  nameWithType: IEntity<Guid>.Id
+  fullName: BallastLaneBoard.Domain.Core.IEntity<System.Guid>.Id
+  nameWithType.vb: IEntity(Of Guid).Id
+  fullName.vb: BallastLaneBoard.Domain.Core.IEntity(Of System.Guid).Id
+- uid: BallastLaneBoard.Domain.Core.IEntity`1.Id
+  commentId: P:BallastLaneBoard.Domain.Core.IEntity`1.Id
+  href: BallastLaneBoard.Domain.Core.IEntity-1.html#BallastLaneBoard_Domain_Core_IEntity_1_Id
+  name: Id
+  nameWithType: IEntity<TId>.Id
+  fullName: BallastLaneBoard.Domain.Core.IEntity<TId>.Id
+  nameWithType.vb: IEntity(Of TId).Id
+  fullName.vb: BallastLaneBoard.Domain.Core.IEntity(Of TId).Id
+- uid: BallastLaneBoard.Domain.Core.IEntity{System.Guid}
+  commentId: T:BallastLaneBoard.Domain.Core.IEntity{System.Guid}
+  parent: BallastLaneBoard.Domain.Core
+  definition: BallastLaneBoard.Domain.Core.IEntity`1
+  href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  name: IEntity<Guid>
+  nameWithType: IEntity<Guid>
+  fullName: BallastLaneBoard.Domain.Core.IEntity<System.Guid>
+  nameWithType.vb: IEntity(Of Guid)
+  fullName.vb: BallastLaneBoard.Domain.Core.IEntity(Of System.Guid)
+  name.vb: IEntity(Of Guid)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+  - name: )
+- uid: BallastLaneBoard.Domain.Core.IEntity`1
+  commentId: T:BallastLaneBoard.Domain.Core.IEntity`1
+  href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  name: IEntity<TId>
+  nameWithType: IEntity<TId>
+  fullName: BallastLaneBoard.Domain.Core.IEntity<TId>
+  nameWithType.vb: IEntity(Of TId)
+  fullName.vb: BallastLaneBoard.Domain.Core.IEntity(Of TId)
+  name.vb: IEntity(Of TId)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: <
+  - name: TId
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TId
+  - name: )

@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Environment secrets — never commit
+.env
+
+# TLS certificates — never commit private keys
+certs/*.pem
+
 # User-specific files
 *.rsuser
 *.suo
@@ -284,6 +290,11 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+
+# Angular
+.angular/
+dist/
+
 
 # Visual Studio 6 build log
 *.plg

@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  id: UpdateTaskRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  children:
+  - BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor(System.String,System.String,System.Nullable{System.DateTimeOffset})
+  - BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+  - BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate
+  - BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+  langs:
+  - csharp
+  - vb
+  name: UpdateTaskRequest
+  nameWithType: UpdateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UpdateTaskRequest
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public sealed record UpdateTaskRequest
+    content.vb: Public NotInheritable Class UpdateTaskRequest
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor(System.String,System.String,System.Nullable{System.DateTimeOffset})
+  commentId: M:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor(System.String,System.String,System.Nullable{System.DateTimeOffset})
+  id: '#ctor(System.String,System.String,System.Nullable{System.DateTimeOffset})'
+  parent: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: UpdateTaskRequest(string, string?, DateTimeOffset?)
+  nameWithType: UpdateTaskRequest.UpdateTaskRequest(string, string?, DateTimeOffset?)
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.UpdateTaskRequest(string, string?, System.DateTimeOffset?)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public UpdateTaskRequest(string Title, string? Description, DateTimeOffset? DueDate)
+    parameters:
+    - id: Title
+      type: System.String
+    - id: Description
+      type: System.String
+    - id: DueDate
+      type: System.Nullable{System.DateTimeOffset}
+    content.vb: Public Sub New(Title As String, Description As String, DueDate As DateTimeOffset?)
+  overload: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor*
+  nameWithType.vb: UpdateTaskRequest.New(String, String, DateTimeOffset?)
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.New(String, String, System.DateTimeOffset?)
+  name.vb: New(String, String, DateTimeOffset?)
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+  id: Title
+  parent: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: UpdateTaskRequest.Title
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Title
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public string Title { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+  id: Description
+  parent: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: UpdateTaskRequest.Description
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Description
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public string? Description { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate
+  id: DueDate
+  parent: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: DueDate
+  nameWithType: UpdateTaskRequest.DueDate
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: DueDate
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public DateTimeOffset? DueDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTimeOffset}
+    content.vb: Public Property DueDate As DateTimeOffset?
+  overload: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate*
+references:
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.#ctor
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html#BallastLaneBoard_Application_TaskManagement_Models_UpdateTaskRequest__ctor_System_String_System_String_System_Nullable_System_DateTimeOffset__
+  name: UpdateTaskRequest
+  nameWithType: UpdateTaskRequest.UpdateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.UpdateTaskRequest
+  nameWithType.vb: UpdateTaskRequest.New
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.DateTimeOffset}
+  commentId: T:System.Nullable{System.DateTimeOffset}
+  parent: System
+  definition: System.Nullable`1
+  name: DateTimeOffset?
+  nameWithType: DateTimeOffset?
+  fullName: System.DateTimeOffset?
+  spec.csharp:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html#BallastLaneBoard_Application_TaskManagement_Models_UpdateTaskRequest_Title
+  name: Title
+  nameWithType: UpdateTaskRequest.Title
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Title
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html#BallastLaneBoard_Application_TaskManagement_Models_UpdateTaskRequest_Description
+  name: Description
+  nameWithType: UpdateTaskRequest.Description
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.Description
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html#BallastLaneBoard_Application_TaskManagement_Models_UpdateTaskRequest_DueDate
+  name: DueDate
+  nameWithType: UpdateTaskRequest.DueDate
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.DueDate

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.Identity.UserRole
+  commentId: T:BallastLaneBoard.Domain.Identity.UserRole
+  id: UserRole
+  parent: BallastLaneBoard.Domain.Identity
+  children:
+  - BallastLaneBoard.Domain.Identity.UserRole.Admin
+  - BallastLaneBoard.Domain.Identity.UserRole.User
+  langs:
+  - csharp
+  - vb
+  name: UserRole
+  nameWithType: UserRole
+  fullName: BallastLaneBoard.Domain.Identity.UserRole
+  type: Enum
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserRole.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UserRole
+    path: ../src/BallastLaneBoard.Domain/Identity/UserRole.cs
+    startLine: 2
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: public enum UserRole
+    content.vb: Public Enum UserRole
+- uid: BallastLaneBoard.Domain.Identity.UserRole.User
+  commentId: F:BallastLaneBoard.Domain.Identity.UserRole.User
+  id: User
+  parent: BallastLaneBoard.Domain.Identity.UserRole
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: UserRole.User
+  fullName: BallastLaneBoard.Domain.Identity.UserRole.User
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserRole.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: User
+    path: ../src/BallastLaneBoard.Domain/Identity/UserRole.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: User = 0
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserRole
+- uid: BallastLaneBoard.Domain.Identity.UserRole.Admin
+  commentId: F:BallastLaneBoard.Domain.Identity.UserRole.Admin
+  id: Admin
+  parent: BallastLaneBoard.Domain.Identity.UserRole
+  langs:
+  - csharp
+  - vb
+  name: Admin
+  nameWithType: UserRole.Admin
+  fullName: BallastLaneBoard.Domain.Identity.UserRole.Admin
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserRole.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Admin
+    path: ../src/BallastLaneBoard.Domain/Identity/UserRole.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: Admin = 1
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserRole
+references:
+- uid: BallastLaneBoard.Domain.Identity
+  commentId: N:BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Identity
+  nameWithType: BallastLaneBoard.Domain.Identity
+  fullName: BallastLaneBoard.Domain.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+- uid: BallastLaneBoard.Domain.Identity.UserRole
+  commentId: T:BallastLaneBoard.Domain.Identity.UserRole
+  parent: BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.Domain.Identity.UserRole.html
+  name: UserRole
+  nameWithType: UserRole
+  fullName: BallastLaneBoard.Domain.Identity.UserRole

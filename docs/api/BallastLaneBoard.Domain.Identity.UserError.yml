@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.Identity.UserError
+  commentId: T:BallastLaneBoard.Domain.Identity.UserError
+  id: UserError
+  parent: BallastLaneBoard.Domain.Identity
+  children:
+  - BallastLaneBoard.Domain.Identity.UserError.DuplicateSubject
+  - BallastLaneBoard.Domain.Identity.UserError.EmailRequired
+  - BallastLaneBoard.Domain.Identity.UserError.InvalidEmail
+  - BallastLaneBoard.Domain.Identity.UserError.UsernameRequired
+  langs:
+  - csharp
+  - vb
+  name: UserError
+  nameWithType: UserError
+  fullName: BallastLaneBoard.Domain.Identity.UserError
+  type: Enum
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UserError
+    path: ../src/BallastLaneBoard.Domain/Identity/UserError.cs
+    startLine: 2
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: public enum UserError
+    content.vb: Public Enum UserError
+- uid: BallastLaneBoard.Domain.Identity.UserError.UsernameRequired
+  commentId: F:BallastLaneBoard.Domain.Identity.UserError.UsernameRequired
+  id: UsernameRequired
+  parent: BallastLaneBoard.Domain.Identity.UserError
+  langs:
+  - csharp
+  - vb
+  name: UsernameRequired
+  nameWithType: UserError.UsernameRequired
+  fullName: BallastLaneBoard.Domain.Identity.UserError.UsernameRequired
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UsernameRequired
+    path: ../src/BallastLaneBoard.Domain/Identity/UserError.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: UsernameRequired = 0
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserError
+- uid: BallastLaneBoard.Domain.Identity.UserError.EmailRequired
+  commentId: F:BallastLaneBoard.Domain.Identity.UserError.EmailRequired
+  id: EmailRequired
+  parent: BallastLaneBoard.Domain.Identity.UserError
+  langs:
+  - csharp
+  - vb
+  name: EmailRequired
+  nameWithType: UserError.EmailRequired
+  fullName: BallastLaneBoard.Domain.Identity.UserError.EmailRequired
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: EmailRequired
+    path: ../src/BallastLaneBoard.Domain/Identity/UserError.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: EmailRequired = 1
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserError
+- uid: BallastLaneBoard.Domain.Identity.UserError.InvalidEmail
+  commentId: F:BallastLaneBoard.Domain.Identity.UserError.InvalidEmail
+  id: InvalidEmail
+  parent: BallastLaneBoard.Domain.Identity.UserError
+  langs:
+  - csharp
+  - vb
+  name: InvalidEmail
+  nameWithType: UserError.InvalidEmail
+  fullName: BallastLaneBoard.Domain.Identity.UserError.InvalidEmail
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: InvalidEmail
+    path: ../src/BallastLaneBoard.Domain/Identity/UserError.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: InvalidEmail = 2
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserError
+- uid: BallastLaneBoard.Domain.Identity.UserError.DuplicateSubject
+  commentId: F:BallastLaneBoard.Domain.Identity.UserError.DuplicateSubject
+  id: DuplicateSubject
+  parent: BallastLaneBoard.Domain.Identity.UserError
+  langs:
+  - csharp
+  - vb
+  name: DuplicateSubject
+  nameWithType: UserError.DuplicateSubject
+  fullName: BallastLaneBoard.Domain.Identity.UserError.DuplicateSubject
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Domain/Identity/UserError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: DuplicateSubject
+    path: ../src/BallastLaneBoard.Domain/Identity/UserError.cs
+    startLine: 7
+  assemblies:
+  - BallastLaneBoard.Domain
+  namespace: BallastLaneBoard.Domain.Identity
+  syntax:
+    content: DuplicateSubject = 3
+    return:
+      type: BallastLaneBoard.Domain.Identity.UserError
+references:
+- uid: BallastLaneBoard.Domain.Identity
+  commentId: N:BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Identity
+  nameWithType: BallastLaneBoard.Domain.Identity
+  fullName: BallastLaneBoard.Domain.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Identity
+    name: Identity
+    href: BallastLaneBoard.Domain.Identity.html
+- uid: BallastLaneBoard.Domain.Identity.UserError
+  commentId: T:BallastLaneBoard.Domain.Identity.UserError
+  parent: BallastLaneBoard.Domain.Identity
+  href: BallastLaneBoard.Domain.Identity.UserError.html
+  name: UserError
+  nameWithType: UserError
+  fullName: BallastLaneBoard.Domain.Identity.UserError

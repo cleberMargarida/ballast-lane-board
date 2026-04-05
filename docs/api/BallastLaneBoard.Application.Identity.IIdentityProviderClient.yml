@@ -1,0 +1,253 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  commentId: T:BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  id: IIdentityProviderClient
+  parent: BallastLaneBoard.Application.Identity
+  children:
+  - BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IIdentityProviderClient
+  nameWithType: IIdentityProviderClient
+  fullName: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  type: Interface
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/IIdentityProviderClient.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: IIdentityProviderClient
+    path: ../src/BallastLaneBoard.Application/Identity/IIdentityProviderClient.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  summary: Abstraction over an external identity provider's Admin API for user provisioning.
+  example: []
+  syntax:
+    content: public interface IIdentityProviderClient
+    content.vb: Public Interface IIdentityProviderClient
+- uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+  id: CreateUserAsync(System.String,System.String,System.String,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  langs:
+  - csharp
+  - vb
+  name: CreateUserAsync(string, string, string, CancellationToken)
+  nameWithType: IIdentityProviderClient.CreateUserAsync(string, string, string, CancellationToken)
+  fullName: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync(string, string, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/IIdentityProviderClient.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: CreateUserAsync
+    path: ../src/BallastLaneBoard.Application/Identity/IIdentityProviderClient.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  summary: Creates a user in the identity provider and returns the external subject (user ID).
+  example: []
+  syntax:
+    content: Task<string> CreateUserAsync(string username, string email, string password, CancellationToken cancellationToken)
+    parameters:
+    - id: username
+      type: System.String
+    - id: email
+      type: System.String
+    - id: password
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Function CreateUserAsync(username As String, email As String, password As String, cancellationToken As CancellationToken) As Task(Of String)
+  overload: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync*
+  nameWithType.vb: IIdentityProviderClient.CreateUserAsync(String, String, String, CancellationToken)
+  fullName.vb: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync(String, String, String, System.Threading.CancellationToken)
+  name.vb: CreateUserAsync(String, String, String, CancellationToken)
+references:
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+- uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync*
+  commentId: Overload:BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync
+  href: BallastLaneBoard.Application.Identity.IIdentityProviderClient.html#BallastLaneBoard_Application_Identity_IIdentityProviderClient_CreateUserAsync_System_String_System_String_System_String_System_Threading_CancellationToken_
+  name: CreateUserAsync
+  nameWithType: IIdentityProviderClient.CreateUserAsync
+  fullName: BallastLaneBoard.Application.Identity.IIdentityProviderClient.CreateUserAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

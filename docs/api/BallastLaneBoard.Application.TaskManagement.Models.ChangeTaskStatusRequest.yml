@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  id: ChangeTaskStatusRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  children:
+  - BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)
+  - BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status
+  langs:
+  - csharp
+  - vb
+  name: ChangeTaskStatusRequest
+  nameWithType: ChangeTaskStatusRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: ChangeTaskStatusRequest
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public sealed record ChangeTaskStatusRequest
+    content.vb: Public NotInheritable Class ChangeTaskStatusRequest
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)
+  commentId: M:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)
+  id: '#ctor(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)'
+  parent: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: ChangeTaskStatusRequest(TaskItemStatus)
+  nameWithType: ChangeTaskStatusRequest.ChangeTaskStatusRequest(TaskItemStatus)
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.ChangeTaskStatusRequest(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public ChangeTaskStatusRequest(TaskItemStatus Status)
+    parameters:
+    - id: Status
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+    content.vb: Public Sub New(Status As TaskItemStatus)
+  overload: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor*
+  nameWithType.vb: ChangeTaskStatusRequest.New(TaskItemStatus)
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.New(BallastLaneBoard.Domain.TaskManagement.TaskItemStatus)
+  name.vb: New(TaskItemStatus)
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status
+  id: Status
+  parent: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: ChangeTaskStatusRequest.Status
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Status
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public TaskItemStatus Status { get; init; }
+    parameters: []
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+    content.vb: Public Property Status As TaskItemStatus
+  overload: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status*
+references:
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.#ctor
+  href: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.html#BallastLaneBoard_Application_TaskManagement_Models_ChangeTaskStatusRequest__ctor_BallastLaneBoard_Domain_TaskManagement_TaskItemStatus_
+  name: ChangeTaskStatusRequest
+  nameWithType: ChangeTaskStatusRequest.ChangeTaskStatusRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.ChangeTaskStatusRequest
+  nameWithType.vb: ChangeTaskStatusRequest.New
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.New
+  name.vb: New
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.html
+  name: TaskItemStatus
+  nameWithType: TaskItemStatus
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status
+  href: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.html#BallastLaneBoard_Application_TaskManagement_Models_ChangeTaskStatusRequest_Status
+  name: Status
+  nameWithType: ChangeTaskStatusRequest.Status
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.Status

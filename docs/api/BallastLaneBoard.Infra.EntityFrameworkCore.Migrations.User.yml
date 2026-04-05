@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  commentId: N:BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  id: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  children:
+  - BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  nameWithType: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  fullName: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Infra
+references:
+- uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate
+  commentId: T:BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate
+  href: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate

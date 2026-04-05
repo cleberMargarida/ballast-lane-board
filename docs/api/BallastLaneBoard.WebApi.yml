@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi
+  commentId: N:BallastLaneBoard.WebApi
+  id: BallastLaneBoard.WebApi
+  children:
+  - BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.WebApi
+  nameWithType: BallastLaneBoard.WebApi
+  fullName: BallastLaneBoard.WebApi
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.WebApi
+references:
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  commentId: T:BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  href: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.html
+  name: AngularSpaHostingExtensions
+  nameWithType: AngularSpaHostingExtensions
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions

@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  id: BallastLaneBoard.Domain.TaskManagement
+  children:
+  - BallastLaneBoard.Domain.TaskManagement.TaskError
+  - BallastLaneBoard.Domain.TaskManagement.TaskItem
+  - BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Domain
+references:
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskError
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskError
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskError.html
+  name: TaskError
+  nameWithType: TaskError
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskError
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItem
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItem
+  href: BallastLaneBoard.Domain.TaskManagement.TaskItem.html
+  name: TaskItem
+  nameWithType: TaskItem
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItem
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.html
+  name: TaskItemStatus
+  nameWithType: TaskItemStatus
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Infra
+  commentId: N:BallastLaneBoard.Infra
+  id: BallastLaneBoard.Infra
+  children:
+  - BallastLaneBoard.Infra.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Infra
+  nameWithType: BallastLaneBoard.Infra
+  fullName: BallastLaneBoard.Infra
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Infra
+references:
+- uid: BallastLaneBoard.Infra.ServiceCollectionExtensions
+  commentId: T:BallastLaneBoard.Infra.ServiceCollectionExtensions
+  href: BallastLaneBoard.Infra.ServiceCollectionExtensions.html
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: BallastLaneBoard.Infra.ServiceCollectionExtensions

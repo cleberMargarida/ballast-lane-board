@@ -1,0 +1,462 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.UserService
+  commentId: T:BallastLaneBoard.Application.Identity.UserService
+  id: UserService
+  parent: BallastLaneBoard.Application.Identity
+  children:
+  - BallastLaneBoard.Application.Identity.UserService.#ctor(BallastLaneBoard.Application.Identity.IUserUoW,BallastLaneBoard.Application.Identity.IIdentityProviderClient)
+  - BallastLaneBoard.Application.Identity.UserService.GetBySubject(System.String,System.Threading.CancellationToken)
+  - BallastLaneBoard.Application.Identity.UserService.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  - BallastLaneBoard.Application.Identity.UserService.Sync(System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: UserService
+  nameWithType: UserService
+  fullName: BallastLaneBoard.Application.Identity.UserService
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/UserService.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UserService
+    path: ../src/BallastLaneBoard.Application/Identity/UserService.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  syntax:
+    content: public class UserService
+    content.vb: Public Class UserService
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.Identity.UserService.#ctor(BallastLaneBoard.Application.Identity.IUserUoW,BallastLaneBoard.Application.Identity.IIdentityProviderClient)
+  commentId: M:BallastLaneBoard.Application.Identity.UserService.#ctor(BallastLaneBoard.Application.Identity.IUserUoW,BallastLaneBoard.Application.Identity.IIdentityProviderClient)
+  id: '#ctor(BallastLaneBoard.Application.Identity.IUserUoW,BallastLaneBoard.Application.Identity.IIdentityProviderClient)'
+  parent: BallastLaneBoard.Application.Identity.UserService
+  langs:
+  - csharp
+  - vb
+  name: UserService(IUserUoW, IIdentityProviderClient)
+  nameWithType: UserService.UserService(IUserUoW, IIdentityProviderClient)
+  fullName: BallastLaneBoard.Application.Identity.UserService.UserService(BallastLaneBoard.Application.Identity.IUserUoW, BallastLaneBoard.Application.Identity.IIdentityProviderClient)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/UserService.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/Identity/UserService.cs
+    startLine: 8
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  syntax:
+    content: public UserService(IUserUoW uow, IIdentityProviderClient identityProvider)
+    parameters:
+    - id: uow
+      type: BallastLaneBoard.Application.Identity.IUserUoW
+    - id: identityProvider
+      type: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+    content.vb: Public Sub New(uow As IUserUoW, identityProvider As IIdentityProviderClient)
+  overload: BallastLaneBoard.Application.Identity.UserService.#ctor*
+  nameWithType.vb: UserService.New(IUserUoW, IIdentityProviderClient)
+  fullName.vb: BallastLaneBoard.Application.Identity.UserService.New(BallastLaneBoard.Application.Identity.IUserUoW, BallastLaneBoard.Application.Identity.IIdentityProviderClient)
+  name.vb: New(IUserUoW, IIdentityProviderClient)
+- uid: BallastLaneBoard.Application.Identity.UserService.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Identity.UserService.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  id: Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Identity.UserService
+  langs:
+  - csharp
+  - vb
+  name: Register(RegisterRequest, CancellationToken)
+  nameWithType: UserService.Register(RegisterRequest, CancellationToken)
+  fullName: BallastLaneBoard.Application.Identity.UserService.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/UserService.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Register
+    path: ../src/BallastLaneBoard.Application/Identity/UserService.cs
+    startLine: 13
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  summary: Registers a new user via the identity provider, then mirrors locally.
+  example: []
+  syntax:
+    content: public Task<Result<UserResponse>> Register(RegisterRequest request, CancellationToken cancellationToken)
+    parameters:
+    - id: request
+      type: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{BallastLaneBoard.Domain.Core.Result{BallastLaneBoard.Application.Identity.Models.UserResponse}}
+    content.vb: Public Function Register(request As RegisterRequest, cancellationToken As CancellationToken) As Task(Of Result(Of UserResponse))
+  overload: BallastLaneBoard.Application.Identity.UserService.Register*
+- uid: BallastLaneBoard.Application.Identity.UserService.GetBySubject(System.String,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Identity.UserService.GetBySubject(System.String,System.Threading.CancellationToken)
+  id: GetBySubject(System.String,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Identity.UserService
+  langs:
+  - csharp
+  - vb
+  name: GetBySubject(string, CancellationToken)
+  nameWithType: UserService.GetBySubject(string, CancellationToken)
+  fullName: BallastLaneBoard.Application.Identity.UserService.GetBySubject(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/UserService.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: GetBySubject
+    path: ../src/BallastLaneBoard.Application/Identity/UserService.cs
+    startLine: 41
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  summary: Gets the current user by external subject, or null if not found.
+  example: []
+  syntax:
+    content: public Task<Result<UserResponse>> GetBySubject(string subject, CancellationToken cancellationToken)
+    parameters:
+    - id: subject
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{BallastLaneBoard.Domain.Core.Result{BallastLaneBoard.Application.Identity.Models.UserResponse}}
+    content.vb: Public Function GetBySubject(subject As String, cancellationToken As CancellationToken) As Task(Of Result(Of UserResponse))
+  overload: BallastLaneBoard.Application.Identity.UserService.GetBySubject*
+  nameWithType.vb: UserService.GetBySubject(String, CancellationToken)
+  fullName.vb: BallastLaneBoard.Application.Identity.UserService.GetBySubject(String, System.Threading.CancellationToken)
+  name.vb: GetBySubject(String, CancellationToken)
+- uid: BallastLaneBoard.Application.Identity.UserService.Sync(System.String,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Identity.UserService.Sync(System.String,System.Threading.CancellationToken)
+  id: Sync(System.String,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Identity.UserService
+  langs:
+  - csharp
+  - vb
+  name: Sync(string, CancellationToken)
+  nameWithType: UserService.Sync(string, CancellationToken)
+  fullName: BallastLaneBoard.Application.Identity.UserService.Sync(string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/UserService.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Sync
+    path: ../src/BallastLaneBoard.Application/Identity/UserService.cs
+    startLine: 58
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity
+  summary: Syncs the current user's last-seen timestamp.
+  example: []
+  syntax:
+    content: public Task<Result<UserResponse>> Sync(string subject, CancellationToken cancellationToken)
+    parameters:
+    - id: subject
+      type: System.String
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{BallastLaneBoard.Domain.Core.Result{BallastLaneBoard.Application.Identity.Models.UserResponse}}
+    content.vb: Public Function Sync(subject As String, cancellationToken As CancellationToken) As Task(Of Result(Of UserResponse))
+  overload: BallastLaneBoard.Application.Identity.UserService.Sync*
+  nameWithType.vb: UserService.Sync(String, CancellationToken)
+  fullName.vb: BallastLaneBoard.Application.Identity.UserService.Sync(String, System.Threading.CancellationToken)
+  name.vb: Sync(String, CancellationToken)
+references:
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.Identity.UserService.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.Identity.UserService.#ctor
+  href: BallastLaneBoard.Application.Identity.UserService.html#BallastLaneBoard_Application_Identity_UserService__ctor_BallastLaneBoard_Application_Identity_IUserUoW_BallastLaneBoard_Application_Identity_IIdentityProviderClient_
+  name: UserService
+  nameWithType: UserService.UserService
+  fullName: BallastLaneBoard.Application.Identity.UserService.UserService
+  nameWithType.vb: UserService.New
+  fullName.vb: BallastLaneBoard.Application.Identity.UserService.New
+  name.vb: New
+- uid: BallastLaneBoard.Application.Identity.IUserUoW
+  commentId: T:BallastLaneBoard.Application.Identity.IUserUoW
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.IUserUoW.html
+  name: IUserUoW
+  nameWithType: IUserUoW
+  fullName: BallastLaneBoard.Application.Identity.IUserUoW
+- uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  commentId: T:BallastLaneBoard.Application.Identity.IIdentityProviderClient
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.IIdentityProviderClient.html
+  name: IIdentityProviderClient
+  nameWithType: IIdentityProviderClient
+  fullName: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+- uid: BallastLaneBoard.Application.Identity.UserService.Register*
+  commentId: Overload:BallastLaneBoard.Application.Identity.UserService.Register
+  href: BallastLaneBoard.Application.Identity.UserService.html#BallastLaneBoard_Application_Identity_UserService_Register_BallastLaneBoard_Application_Identity_Models_RegisterRequest_System_Threading_CancellationToken_
+  name: Register
+  nameWithType: UserService.Register
+  fullName: BallastLaneBoard.Application.Identity.UserService.Register
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  commentId: T:BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  parent: BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html
+  name: RegisterRequest
+  nameWithType: RegisterRequest
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{BallastLaneBoard.Domain.Core.Result{BallastLaneBoard.Application.Identity.Models.UserResponse}}
+  commentId: T:System.Threading.Tasks.Task{BallastLaneBoard.Domain.Core.Result{BallastLaneBoard.Application.Identity.Models.UserResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: BallastLaneBoard.Domain.Core.Result-1.html
+  name: Task<Result<UserResponse>>
+  nameWithType: Task<Result<UserResponse>>
+  fullName: System.Threading.Tasks.Task<BallastLaneBoard.Domain.Core.Result<BallastLaneBoard.Application.Identity.Models.UserResponse>>
+  nameWithType.vb: Task(Of Result(Of UserResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of BallastLaneBoard.Domain.Core.Result(Of BallastLaneBoard.Application.Identity.Models.UserResponse))
+  name.vb: Task(Of Result(Of UserResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: <
+  - uid: BallastLaneBoard.Application.Identity.Models.UserResponse
+    name: UserResponse
+    href: BallastLaneBoard.Application.Identity.Models.UserResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BallastLaneBoard.Application.Identity.Models.UserResponse
+    name: UserResponse
+    href: BallastLaneBoard.Application.Identity.Models.UserResponse.html
+  - name: )
+  - name: )
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BallastLaneBoard.Application.Identity.UserService.GetBySubject*
+  commentId: Overload:BallastLaneBoard.Application.Identity.UserService.GetBySubject
+  href: BallastLaneBoard.Application.Identity.UserService.html#BallastLaneBoard_Application_Identity_UserService_GetBySubject_System_String_System_Threading_CancellationToken_
+  name: GetBySubject
+  nameWithType: UserService.GetBySubject
+  fullName: BallastLaneBoard.Application.Identity.UserService.GetBySubject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BallastLaneBoard.Application.Identity.UserService.Sync*
+  commentId: Overload:BallastLaneBoard.Application.Identity.UserService.Sync
+  href: BallastLaneBoard.Application.Identity.UserService.html#BallastLaneBoard_Application_Identity_UserService_Sync_System_String_System_Threading_CancellationToken_
+  name: Sync
+  nameWithType: UserService.Sync
+  fullName: BallastLaneBoard.Application.Identity.UserService.Sync

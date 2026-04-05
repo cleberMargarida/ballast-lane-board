@@ -1,0 +1,26 @@
+- name: Getting Started
+  items:
+    - name: Overview
+      href: ../getting-started/index.md
+    - name: Installation
+      href: ../getting-started/installation.md
+    - name: Quick Start
+      href: ../getting-started/quick-start.md
+- name: Architecture
+  items:
+    - name: Overview
+      href: ../architecture/index.md
+- name: API Endpoints
+  items:
+    - name: Tasks
+      href: ../api-endpoints/tasks.md
+    - name: Auth
+      href: ../api-endpoints/auth.md
+- name: Deployment
+  items:
+    - name: Docker
+      href: ../deployment/docker.md
+- name: Specification Compliance
+  items:
+    - name: Overview
+      href: ../specification/index.md

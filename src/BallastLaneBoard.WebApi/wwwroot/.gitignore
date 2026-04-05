@@ -1,0 +1,4 @@
+# Ignore Angular build output in wwwroot
+*
+!.gitignore
+!swagger-dark.css

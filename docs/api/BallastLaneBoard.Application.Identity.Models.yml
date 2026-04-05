@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  id: BallastLaneBoard.Application.Identity.Models
+  children:
+  - BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  - BallastLaneBoard.Application.Identity.Models.UserResponse
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Application
+references:
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  commentId: T:BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  parent: BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html
+  name: RegisterRequest
+  nameWithType: RegisterRequest
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+- uid: BallastLaneBoard.Application.Identity.Models.UserResponse
+  commentId: T:BallastLaneBoard.Application.Identity.Models.UserResponse
+  href: BallastLaneBoard.Application.Identity.Models.UserResponse.html
+  name: UserResponse
+  nameWithType: UserResponse
+  fullName: BallastLaneBoard.Application.Identity.Models.UserResponse
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html

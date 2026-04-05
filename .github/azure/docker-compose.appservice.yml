@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  api:
+    image: __API_IMAGE__
+    restart: always
+    ports:
+      - "8080:8080"

@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  id: BallastLaneBoard.Application.TaskManagement.Models
+  children:
+  - BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  - BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  - BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Application
+references:
+- uid: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest.html
+  name: CreateTaskRequest
+  nameWithType: CreateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+- uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest.html
+  name: UpdateTaskRequest
+  nameWithType: UpdateTaskRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+- uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest.html
+  name: ChangeTaskStatusRequest
+  nameWithType: ChangeTaskStatusRequest
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html
+  name: TaskResponse
+  nameWithType: TaskResponse
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html

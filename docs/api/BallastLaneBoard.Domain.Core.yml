@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Domain.Core
+  commentId: N:BallastLaneBoard.Domain.Core
+  id: BallastLaneBoard.Domain.Core
+  children:
+  - BallastLaneBoard.Domain.Core.IAggregateRoot
+  - BallastLaneBoard.Domain.Core.IAggregateRoot`1
+  - BallastLaneBoard.Domain.Core.IEntity
+  - BallastLaneBoard.Domain.Core.IEntity`1
+  - BallastLaneBoard.Domain.Core.Result
+  - BallastLaneBoard.Domain.Core.ResultExtensions
+  - BallastLaneBoard.Domain.Core.Result`1
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Domain.Core
+  nameWithType: BallastLaneBoard.Domain.Core
+  fullName: BallastLaneBoard.Domain.Core
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Domain
+references:
+- uid: BallastLaneBoard.Domain.Core.IEntity
+  commentId: T:BallastLaneBoard.Domain.Core.IEntity
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: BallastLaneBoard.Domain.Core.IEntity
+- uid: BallastLaneBoard.Domain.Core.IEntity`1
+  commentId: T:BallastLaneBoard.Domain.Core.IEntity`1
+  href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  name: IEntity<TId>
+  nameWithType: IEntity<TId>
+  fullName: BallastLaneBoard.Domain.Core.IEntity<TId>
+  nameWithType.vb: IEntity(Of TId)
+  fullName.vb: BallastLaneBoard.Domain.Core.IEntity(Of TId)
+  name.vb: IEntity(Of TId)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: <
+  - name: TId
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity
+    href: BallastLaneBoard.Domain.Core.IEntity-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TId
+  - name: )
+- uid: BallastLaneBoard.Domain.Core.IAggregateRoot
+  commentId: T:BallastLaneBoard.Domain.Core.IAggregateRoot
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.IAggregateRoot.html
+  name: IAggregateRoot
+  nameWithType: IAggregateRoot
+  fullName: BallastLaneBoard.Domain.Core.IAggregateRoot
+- uid: BallastLaneBoard.Domain.Core.IAggregateRoot`1
+  commentId: T:BallastLaneBoard.Domain.Core.IAggregateRoot`1
+  href: BallastLaneBoard.Domain.Core.IAggregateRoot-1.html
+  name: IAggregateRoot<TId>
+  nameWithType: IAggregateRoot<TId>
+  fullName: BallastLaneBoard.Domain.Core.IAggregateRoot<TId>
+  nameWithType.vb: IAggregateRoot(Of TId)
+  fullName.vb: BallastLaneBoard.Domain.Core.IAggregateRoot(Of TId)
+  name.vb: IAggregateRoot(Of TId)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.IAggregateRoot`1
+    name: IAggregateRoot
+    href: BallastLaneBoard.Domain.Core.IAggregateRoot-1.html
+  - name: <
+  - name: TId
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.IAggregateRoot`1
+    name: IAggregateRoot
+    href: BallastLaneBoard.Domain.Core.IAggregateRoot-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TId
+  - name: )
+- uid: BallastLaneBoard.Domain.Core.Result
+  commentId: T:BallastLaneBoard.Domain.Core.Result
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.Result.html
+  name: Result
+  nameWithType: Result
+  fullName: BallastLaneBoard.Domain.Core.Result
+- uid: BallastLaneBoard.Domain.Core.Result`1
+  commentId: T:BallastLaneBoard.Domain.Core.Result`1
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.Result-1.html
+  name: Result<T>
+  nameWithType: Result<T>
+  fullName: BallastLaneBoard.Domain.Core.Result<T>
+  nameWithType.vb: Result(Of T)
+  fullName.vb: BallastLaneBoard.Domain.Core.Result(Of T)
+  name.vb: Result(Of T)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BallastLaneBoard.Domain.Core.ResultExtensions
+  commentId: T:BallastLaneBoard.Domain.Core.ResultExtensions
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.ResultExtensions.html
+  name: ResultExtensions
+  nameWithType: ResultExtensions
+  fullName: BallastLaneBoard.Domain.Core.ResultExtensions
+- uid: BallastLaneBoard.Domain.Core
+  commentId: N:BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Core
+  nameWithType: BallastLaneBoard.Domain.Core
+  fullName: BallastLaneBoard.Domain.Core
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html

@@ -1,0 +1,59 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/BallastLaneBoard.Domain/BallastLaneBoard.Domain.csproj",
+            "src/BallastLaneBoard.Application/BallastLaneBoard.Application.csproj",
+            "src/BallastLaneBoard.Infra/BallastLaneBoard.Infra.csproj",
+            "src/BallastLaneBoard.WebApi/BallastLaneBoard.WebApi.csproj"
+          ],
+          "src": ".."
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net10.0"
+      },
+      "filter": "filterConfig.yml"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**",
+          "api/index.md",
+          "filterConfig.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.{png,jpg,svg}"
+        ]
+      }
+    ],
+    "dest": "../bin/docs",
+    "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appTitle": "Ballast Lane Board",
+      "_appFooter": "Ballast Lane Board — Task Management Platform",
+      "_enableSearch": true,
+      "_gitContribute": {
+        "repo": "https://github.com/user/ballast-lane-board",
+        "branch": "master",
+        "apiSpecFolder": "docs/api"
+      }
+    },
+    "template": [
+      "default",
+      "modern"
+    ]
+  }
+}

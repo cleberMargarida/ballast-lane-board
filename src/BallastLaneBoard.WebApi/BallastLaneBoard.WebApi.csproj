@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>BallastLaneBoard.WebApi</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <SpaRoot>..\BallastLaneBoard.ClientApp\</SpaRoot>
+    <SpaProxyServerUrl>http://localhost:4200/index.html</SpaProxyServerUrl>
+    <SpaProxyRedirectUrl>/_spa/continue</SpaProxyRedirectUrl>
+    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+    <SpaProxyTimeoutInSeconds>120</SpaProxyTimeoutInSeconds>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**;$(SpaRoot)dist\**;$(SpaRoot).angular\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="10.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="10.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**;$(SpaRoot)dist\**;$(SpaRoot).angular\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\BallastLaneBoard.ClientApp\src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\BallastLaneBoard.ClientApp\angular.json" />
+    <None Remove="..\BallastLaneBoard.ClientApp\package-lock.json" />
+    <None Remove="..\BallastLaneBoard.ClientApp\package.json" />
+    <None Remove="..\BallastLaneBoard.ClientApp\postcss.config.js" />
+    <None Remove="..\BallastLaneBoard.ClientApp\proxy.conf.json" />
+    <None Remove="..\BallastLaneBoard.ClientApp\tsconfig.app.json" />
+    <None Remove="..\BallastLaneBoard.ClientApp\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BallastLaneBoard.Application\BallastLaneBoard.Application.csproj" />
+    <ProjectReference Include="..\BallastLaneBoard.Infra\BallastLaneBoard.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

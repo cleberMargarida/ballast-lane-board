@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  id: BallastLaneBoard.Application.Abstractions
+  children:
+  - BallastLaneBoard.Application.Abstractions.ApplicationError
+  - BallastLaneBoard.Application.Abstractions.IRepository`1
+  - BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.Application
+references:
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError
+  commentId: T:BallastLaneBoard.Application.Abstractions.ApplicationError
+  parent: BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.Application.Abstractions.ApplicationError.html
+  name: ApplicationError
+  nameWithType: ApplicationError
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  commentId: T:BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  parent: BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+- uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+  commentId: T:BallastLaneBoard.Application.Abstractions.IRepository`1
+  href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: BallastLaneBoard.Application.Abstractions.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: BallastLaneBoard.Application.Abstractions.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository
+    href: BallastLaneBoard.Application.Abstractions.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html

@@ -1,3 +1,23 @@
 <Solution>
-  <Project Path="ballast-lane-board/ballast-lane-board.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/BallastLaneBoard.Domain/BallastLaneBoard.Domain.csproj" />
+    <Project Path="src/BallastLaneBoard.Application/BallastLaneBoard.Application.csproj" />
+    <Project Path="src/BallastLaneBoard.Infra/BallastLaneBoard.Infra.csproj" />
+    <Project Path="src/BallastLaneBoard.WebApi/BallastLaneBoard.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BallastLaneBoard.Domain.UnitTests/BallastLaneBoard.Domain.UnitTests.csproj" />
+    <Project Path="tests/BallastLaneBoard.Application.UnitTests/BallastLaneBoard.Application.UnitTests.csproj" />
+    <Project Path="tests/BallastLaneBoard.Infra.IntegrationTests/BallastLaneBoard.Infra.IntegrationTests.csproj" />
+    <Project Path="tests/BallastLaneBoard.WebApi.IntegrationTests/BallastLaneBoard.WebApi.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="SPECIFICATION.md" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>

@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  commentId: T:BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  id: AngularSpaHostingExtensions
+  parent: BallastLaneBoard.WebApi
+  children:
+  - BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa(Microsoft.AspNetCore.Builder.WebApplication)
+  - BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting(Microsoft.AspNetCore.Builder.WebApplication)
+  langs:
+  - csharp
+  - vb
+  name: AngularSpaHostingExtensions
+  nameWithType: AngularSpaHostingExtensions
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: AngularSpaHostingExtensions
+    path: ../src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi
+  syntax:
+    content: public static class AngularSpaHostingExtensions
+    content.vb: Public Module AngularSpaHostingExtensions
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting(Microsoft.AspNetCore.Builder.WebApplication)
+  commentId: M:BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting(Microsoft.AspNetCore.Builder.WebApplication)
+  id: UseAngularSpaHosting(Microsoft.AspNetCore.Builder.WebApplication)
+  isExtensionMethod: true
+  parent: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  langs:
+  - csharp
+  - vb
+  name: UseAngularSpaHosting(WebApplication)
+  nameWithType: AngularSpaHostingExtensions.UseAngularSpaHosting(WebApplication)
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting(Microsoft.AspNetCore.Builder.WebApplication)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UseAngularSpaHosting
+    path: ../src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+    startLine: 11
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi
+  syntax:
+    content: public static WebApplication UseAngularSpaHosting(this WebApplication app)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.WebApplication
+    return:
+      type: Microsoft.AspNetCore.Builder.WebApplication
+    content.vb: Public Shared Function UseAngularSpaHosting(app As WebApplication) As WebApplication
+  overload: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting*
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa(Microsoft.AspNetCore.Builder.WebApplication)
+  commentId: M:BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa(Microsoft.AspNetCore.Builder.WebApplication)
+  id: MapAngularSpa(Microsoft.AspNetCore.Builder.WebApplication)
+  isExtensionMethod: true
+  parent: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+  langs:
+  - csharp
+  - vb
+  name: MapAngularSpa(WebApplication)
+  nameWithType: AngularSpaHostingExtensions.MapAngularSpa(WebApplication)
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa(Microsoft.AspNetCore.Builder.WebApplication)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: MapAngularSpa
+    path: ../src/BallastLaneBoard.WebApi/AngularSpaHostingExtensions.cs
+    startLine: 19
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi
+  syntax:
+    content: public static WebApplication MapAngularSpa(this WebApplication app)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.WebApplication
+    return:
+      type: Microsoft.AspNetCore.Builder.WebApplication
+    content.vb: Public Shared Function MapAngularSpa(app As WebApplication) As WebApplication
+  overload: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa*
+references:
+- uid: BallastLaneBoard.WebApi
+  commentId: N:BallastLaneBoard.WebApi
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.WebApi
+  nameWithType: BallastLaneBoard.WebApi
+  fullName: BallastLaneBoard.WebApi
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting*
+  commentId: Overload:BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting
+  href: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.html#BallastLaneBoard_WebApi_AngularSpaHostingExtensions_UseAngularSpaHosting_Microsoft_AspNetCore_Builder_WebApplication_
+  name: UseAngularSpaHosting
+  nameWithType: AngularSpaHostingExtensions.UseAngularSpaHosting
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.UseAngularSpaHosting
+- uid: Microsoft.AspNetCore.Builder.WebApplication
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplication
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  name: WebApplication
+  nameWithType: WebApplication
+  fullName: Microsoft.AspNetCore.Builder.WebApplication
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa*
+  commentId: Overload:BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa
+  href: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.html#BallastLaneBoard_WebApi_AngularSpaHostingExtensions_MapAngularSpa_Microsoft_AspNetCore_Builder_WebApplication_
+  name: MapAngularSpa
+  nameWithType: AngularSpaHostingExtensions.MapAngularSpa
+  fullName: BallastLaneBoard.WebApi.AngularSpaHostingExtensions.MapAngularSpa

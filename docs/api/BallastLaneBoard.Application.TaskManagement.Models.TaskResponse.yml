@@ -1,0 +1,533 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  commentId: T:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  id: TaskResponse
+  parent: BallastLaneBoard.Application.TaskManagement.Models
+  children:
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.TaskManagement.TaskItemStatus,System.Nullable{System.DateTimeOffset},System.Guid,System.DateTimeOffset,System.DateTimeOffset)
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt
+  - BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+  langs:
+  - csharp
+  - vb
+  name: TaskResponse
+  nameWithType: TaskResponse
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: TaskResponse
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public sealed record TaskResponse
+    content.vb: Public NotInheritable Class TaskResponse
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.TaskManagement.TaskItemStatus,System.Nullable{System.DateTimeOffset},System.Guid,System.DateTimeOffset,System.DateTimeOffset)
+  commentId: M:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.TaskManagement.TaskItemStatus,System.Nullable{System.DateTimeOffset},System.Guid,System.DateTimeOffset,System.DateTimeOffset)
+  id: '#ctor(System.Guid,System.String,System.String,BallastLaneBoard.Domain.TaskManagement.TaskItemStatus,System.Nullable{System.DateTimeOffset},System.Guid,System.DateTimeOffset,System.DateTimeOffset)'
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: TaskResponse(Guid, string, string?, TaskItemStatus, DateTimeOffset?, Guid, DateTimeOffset, DateTimeOffset)
+  nameWithType: TaskResponse.TaskResponse(Guid, string, string?, TaskItemStatus, DateTimeOffset?, Guid, DateTimeOffset, DateTimeOffset)
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.TaskResponse(System.Guid, string, string?, BallastLaneBoard.Domain.TaskManagement.TaskItemStatus, System.DateTimeOffset?, System.Guid, System.DateTimeOffset, System.DateTimeOffset)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public TaskResponse(Guid Id, string Title, string? Description, TaskItemStatus Status, DateTimeOffset? DueDate, Guid UserId, DateTimeOffset CreatedAt, DateTimeOffset UpdatedAt)
+    parameters:
+    - id: Id
+      type: System.Guid
+    - id: Title
+      type: System.String
+    - id: Description
+      type: System.String
+    - id: Status
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+    - id: DueDate
+      type: System.Nullable{System.DateTimeOffset}
+    - id: UserId
+      type: System.Guid
+    - id: CreatedAt
+      type: System.DateTimeOffset
+    - id: UpdatedAt
+      type: System.DateTimeOffset
+    content.vb: Public Sub New(Id As Guid, Title As String, Description As String, Status As TaskItemStatus, DueDate As DateTimeOffset?, UserId As Guid, CreatedAt As DateTimeOffset, UpdatedAt As DateTimeOffset)
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor*
+  nameWithType.vb: TaskResponse.New(Guid, String, String, TaskItemStatus, DateTimeOffset?, Guid, DateTimeOffset, DateTimeOffset)
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.New(System.Guid, String, String, BallastLaneBoard.Domain.TaskManagement.TaskItemStatus, System.DateTimeOffset?, System.Guid, System.DateTimeOffset, System.DateTimeOffset)
+  name.vb: New(Guid, String, String, TaskItemStatus, DateTimeOffset?, Guid, DateTimeOffset, DateTimeOffset)
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+  id: Id
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: TaskResponse.Id
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Id
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 11
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public Guid Id { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+  id: Title
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: TaskResponse.Title
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Title
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 12
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public string Title { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+  id: Description
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TaskResponse.Description
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Description
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 13
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public string? Description { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+  id: Status
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: TaskResponse.Status
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Status
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 14
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public TaskItemStatus Status { get; init; }
+    parameters: []
+    return:
+      type: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+    content.vb: Public Property Status As TaskItemStatus
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+  id: DueDate
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: DueDate
+  nameWithType: TaskResponse.DueDate
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: DueDate
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 15
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public DateTimeOffset? DueDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTimeOffset}
+    content.vb: Public Property DueDate As DateTimeOffset?
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+  id: UserId
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: TaskResponse.UserId
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UserId
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 16
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public Guid UserId { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property UserId As Guid
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+  id: CreatedAt
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: TaskResponse.CreatedAt
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: CreatedAt
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 17
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public DateTimeOffset CreatedAt { get; init; }
+    parameters: []
+    return:
+      type: System.DateTimeOffset
+    content.vb: Public Property CreatedAt As DateTimeOffset
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt*
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt
+  commentId: P:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt
+  id: UpdatedAt
+  parent: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+  langs:
+  - csharp
+  - vb
+  name: UpdatedAt
+  nameWithType: TaskResponse.UpdatedAt
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: UpdatedAt
+    path: ../src/BallastLaneBoard.Application/TaskManagement/Models/TaskModels.cs
+    startLine: 18
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.TaskManagement.Models
+  syntax:
+    content: public DateTimeOffset UpdatedAt { get; init; }
+    parameters: []
+    return:
+      type: System.DateTimeOffset
+    content.vb: Public Property UpdatedAt As DateTimeOffset
+  overload: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt*
+references:
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  commentId: N:BallastLaneBoard.Application.TaskManagement.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  nameWithType: BallastLaneBoard.Application.TaskManagement.Models
+  fullName: BallastLaneBoard.Application.TaskManagement.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Application.TaskManagement.html
+  - name: .
+  - uid: BallastLaneBoard.Application.TaskManagement.Models
+    name: Models
+    href: BallastLaneBoard.Application.TaskManagement.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.#ctor
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse__ctor_System_Guid_System_String_System_String_BallastLaneBoard_Domain_TaskManagement_TaskItemStatus_System_Nullable_System_DateTimeOffset__System_Guid_System_DateTimeOffset_System_DateTimeOffset_
+  name: TaskResponse
+  nameWithType: TaskResponse.TaskResponse
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.TaskResponse
+  nameWithType.vb: TaskResponse.New
+  fullName.vb: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.New
+  name.vb: New
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  commentId: T:BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+  parent: BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus.html
+  name: TaskItemStatus
+  nameWithType: TaskItemStatus
+  fullName: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+- uid: System.Nullable{System.DateTimeOffset}
+  commentId: T:System.Nullable{System.DateTimeOffset}
+  parent: System
+  definition: System.Nullable`1
+  name: DateTimeOffset?
+  nameWithType: DateTimeOffset?
+  fullName: System.DateTimeOffset?
+  spec.csharp:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    isExternal: true
+  - name: '?'
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: BallastLaneBoard.Domain.TaskManagement
+  commentId: N:BallastLaneBoard.Domain.TaskManagement
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.TaskManagement
+  nameWithType: BallastLaneBoard.Domain.TaskManagement
+  fullName: BallastLaneBoard.Domain.TaskManagement
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.TaskManagement
+    name: TaskManagement
+    href: BallastLaneBoard.Domain.TaskManagement.html
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_Id
+  name: Id
+  nameWithType: TaskResponse.Id
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Id
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_Title
+  name: Title
+  nameWithType: TaskResponse.Title
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Title
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_Description
+  name: Description
+  nameWithType: TaskResponse.Description
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Description
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_Status
+  name: Status
+  nameWithType: TaskResponse.Status
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.Status
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_DueDate
+  name: DueDate
+  nameWithType: TaskResponse.DueDate
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.DueDate
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_UserId
+  name: UserId
+  nameWithType: TaskResponse.UserId
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UserId
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_CreatedAt
+  name: CreatedAt
+  nameWithType: TaskResponse.CreatedAt
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.CreatedAt
+- uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt*
+  commentId: Overload:BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt
+  href: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.html#BallastLaneBoard_Application_TaskManagement_Models_TaskResponse_UpdatedAt
+  name: UpdatedAt
+  nameWithType: TaskResponse.UpdatedAt
+  fullName: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse.UpdatedAt

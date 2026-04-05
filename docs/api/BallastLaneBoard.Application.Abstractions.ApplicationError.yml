@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError
+  commentId: T:BallastLaneBoard.Application.Abstractions.ApplicationError
+  id: ApplicationError
+  parent: BallastLaneBoard.Application.Abstractions
+  children:
+  - BallastLaneBoard.Application.Abstractions.ApplicationError.Conflict
+  - BallastLaneBoard.Application.Abstractions.ApplicationError.Forbidden
+  - BallastLaneBoard.Application.Abstractions.ApplicationError.NotFound
+  - BallastLaneBoard.Application.Abstractions.ApplicationError.Unauthorized
+  langs:
+  - csharp
+  - vb
+  name: ApplicationError
+  nameWithType: ApplicationError
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError
+  type: Enum
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: ApplicationError
+    path: ../src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+    startLine: 2
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: public enum ApplicationError
+    content.vb: Public Enum ApplicationError
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError.NotFound
+  commentId: F:BallastLaneBoard.Application.Abstractions.ApplicationError.NotFound
+  id: NotFound
+  parent: BallastLaneBoard.Application.Abstractions.ApplicationError
+  langs:
+  - csharp
+  - vb
+  name: NotFound
+  nameWithType: ApplicationError.NotFound
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError.NotFound
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: NotFound
+    path: ../src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: NotFound = 100
+    return:
+      type: BallastLaneBoard.Application.Abstractions.ApplicationError
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError.Unauthorized
+  commentId: F:BallastLaneBoard.Application.Abstractions.ApplicationError.Unauthorized
+  id: Unauthorized
+  parent: BallastLaneBoard.Application.Abstractions.ApplicationError
+  langs:
+  - csharp
+  - vb
+  name: Unauthorized
+  nameWithType: ApplicationError.Unauthorized
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError.Unauthorized
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Unauthorized
+    path: ../src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+    startLine: 5
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: Unauthorized = 101
+    return:
+      type: BallastLaneBoard.Application.Abstractions.ApplicationError
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError.Forbidden
+  commentId: F:BallastLaneBoard.Application.Abstractions.ApplicationError.Forbidden
+  id: Forbidden
+  parent: BallastLaneBoard.Application.Abstractions.ApplicationError
+  langs:
+  - csharp
+  - vb
+  name: Forbidden
+  nameWithType: ApplicationError.Forbidden
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError.Forbidden
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Forbidden
+    path: ../src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+    startLine: 6
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: Forbidden = 102
+    return:
+      type: BallastLaneBoard.Application.Abstractions.ApplicationError
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError.Conflict
+  commentId: F:BallastLaneBoard.Application.Abstractions.ApplicationError.Conflict
+  id: Conflict
+  parent: BallastLaneBoard.Application.Abstractions.ApplicationError
+  langs:
+  - csharp
+  - vb
+  name: Conflict
+  nameWithType: ApplicationError.Conflict
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError.Conflict
+  type: Field
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Conflict
+    path: ../src/BallastLaneBoard.Application/Abstractions/ApplicationError.cs
+    startLine: 7
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: Conflict = 103
+    return:
+      type: BallastLaneBoard.Application.Abstractions.ApplicationError
+references:
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+- uid: BallastLaneBoard.Application.Abstractions.ApplicationError
+  commentId: T:BallastLaneBoard.Application.Abstractions.ApplicationError
+  parent: BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.Application.Abstractions.ApplicationError.html
+  name: ApplicationError
+  nameWithType: ApplicationError
+  fullName: BallastLaneBoard.Application.Abstractions.ApplicationError

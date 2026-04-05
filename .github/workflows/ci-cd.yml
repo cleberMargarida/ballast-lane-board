@@ -1,0 +1,307 @@
+name: .NET CI/CD
+
+on:
+  push:
+    branches: ["master", "develop"]
+  pull_request:
+    branches: ["*"]
+  release:
+    types: [published]
+
+env:
+  REGISTRY: docker.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+  unit-tests:
+    name: Unit Tests
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Run Domain Unit Tests
+        run: dotnet test tests/BallastLaneBoard.Domain.UnitTests/ --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory coverage/domain --logger "trx;LogFileName=domain-tests.trx"
+
+      - name: Run Application Unit Tests
+        run: dotnet test tests/BallastLaneBoard.Application.UnitTests/ --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory coverage/application --logger "trx;LogFileName=application-tests.trx"
+
+      - name: Merge Coverage Reports
+        run: |
+          dotnet tool install -g dotnet-coverage
+          dotnet-coverage merge coverage/**/coverage.cobertura.xml -f cobertura -o coverage/unit-coverage.cobertura.xml
+
+      - name: Upload Unit Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unit-test-results
+          path: |
+            coverage/domain/*.trx
+            coverage/application/*.trx
+            coverage/unit-coverage.cobertura.xml
+
+  integration-tests:
+    name: Integration Tests
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Verify Docker availability
+        run: |
+          docker version
+          docker info
+
+      - name: Run Infra Integration Tests
+        run: dotnet test tests/BallastLaneBoard.Infra.IntegrationTests/ --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory coverage/infra --logger "trx;LogFileName=infra-integration-tests.trx"
+
+      - name: Run WebApi Integration Tests
+        run: dotnet test tests/BallastLaneBoard.WebApi.IntegrationTests/ --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory coverage/webapi --logger "trx;LogFileName=webapi-integration-tests.trx"
+
+      - name: Upload Integration Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-test-results
+          path: |
+            coverage/infra/*.trx
+            coverage/webapi/*.trx
+            coverage/infra/**/coverage.cobertura.xml
+            coverage/webapi/**/coverage.cobertura.xml
+
+  test-report:
+    name: Test Report
+    needs: [unit-tests, integration-tests]
+    runs-on: ubuntu-latest
+    if: always()
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download Unit Test Results
+        uses: actions/download-artifact@v4
+        with:
+          name: unit-test-results
+          path: test-results/unit
+
+      - name: Download Integration Test Results
+        uses: actions/download-artifact@v4
+        with:
+          name: integration-test-results
+          path: test-results/integration
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Merge All Coverage Reports
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          reportgenerator "-reports:test-results/**/*.cobertura.xml" "-targetdir:test-results" "-reporttypes:Cobertura"
+          mv test-results/Cobertura.xml test-results/combined-coverage.cobertura.xml
+
+      - name: Combined Coverage Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: test-results/combined-coverage.cobertura.xml
+          badge: true
+          format: markdown
+          output: both
+
+      - name: Write Combined Coverage Summary
+        run: |
+          echo "## Automated Tests Coverage" >> $GITHUB_STEP_SUMMARY
+          cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Test Results
+          path: test-results/**/*.trx
+          reporter: dotnet-trx
+          fail-on-error: false
+
+  publish-image:
+    name: Publish Docker Image
+    needs: [unit-tests, integration-tests]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: src/BallastLaneBoard.WebApi/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy-to-azure:
+    name: Deploy to Azure App Service (Compose)
+    needs: [publish-image]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Render Compose file with release image
+        run: |
+          IMAGE_TO_DEPLOY="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}"
+          sed "s|__API_IMAGE__|${IMAGE_TO_DEPLOY}|g" .github/azure/docker-compose.appservice.yml > .github/azure/docker-compose.appservice.generated.yml
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Configure App Service registry and port
+        run: |
+          az webapp config appsettings set \
+            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+            --settings \
+            WEBSITES_PORT=8080 \
+            DOCKER_REGISTRY_SERVER_URL=https://index.docker.io \
+            DOCKER_REGISTRY_SERVER_USERNAME="${{ secrets.DOCKERHUB_USERNAME }}" \
+            DOCKER_REGISTRY_SERVER_PASSWORD="${{ secrets.DOCKERHUB_TOKEN }}"
+
+      - name: Deploy multi-container configuration
+        run: |
+          az webapp config container set \
+            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+            --multicontainer-config-type COMPOSE \
+            --multicontainer-config-file .github/azure/docker-compose.appservice.generated.yml
+          az webapp restart \
+            --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+            --name "${{ secrets.AZURE_WEBAPP_NAME }}"
+
+  documentation:
+    name: Build and Deploy Documentation
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push' && hashFiles('docs/docfx.json') != ''
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Build Documentation
+        run: |
+          cd docs
+          docfx metadata docfx.json
+          docfx build docfx.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./bin/docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

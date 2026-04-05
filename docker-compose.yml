@@ -1,0 +1,110 @@
+services:
+  db:
+    image: postgres:17-alpine
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        cat > /docker-entrypoint-initdb.d/init-db.sql <<'SQL'
+        -- Create databases for Keycloak and the application
+        CREATE DATABASE keycloak;
+        CREATE DATABASE ballastlaneboard;
+
+        -- Create Keycloak-specific user
+        CREATE USER keycloak WITH PASSWORD 'keycloak';
+        GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak;
+        ALTER DATABASE keycloak OWNER TO keycloak;
+        SQL
+
+        exec docker-entrypoint.sh postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      ballast-lane-net:
+        ipv4_address: 172.31.240.2
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2
+    command: start --import-realm --spi-theme-cache-themes=false
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://172.31.240.2:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_HOSTNAME: http://${KEYCLOAK_HOSTNAME}
+      KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
+      KC_PROXY_HEADERS: xforwarded
+      KC_HTTP_ENABLED: "true"
+    volumes:
+      - ./keycloak:/opt/keycloak/data/import
+      - ./keycloak/themes:/opt/keycloak/themes
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8080'"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      ballast-lane-net:
+        ipv4_address: 172.31.240.3
+
+  api:
+    build:
+      context: .
+      dockerfile: src/BallastLaneBoard.WebApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=172.31.240.2;Port=5432;Database=ballastlaneboard;Username=postgres;Password=${POSTGRES_PASSWORD}"
+      OpenIdConnect__Authority: "http://keycloak:8080/realms/ballast-lane-board"
+      OpenIdConnect__PublicAuthority: "http://${KEYCLOAK_HOSTNAME}/realms/ballast-lane-board"
+      OpenIdConnect__Audience: "ballast-lane-board-api"
+      OpenIdConnect__RoleClaimPath: "realm_access.roles"
+      OpenIdConnect__RequireHttpsMetadata: "false"
+      IdentityProvider__AdminUrl: "http://keycloak:8080"
+      IdentityProvider__Realm: "ballast-lane-board"
+      IdentityProvider__AdminUser: "admin"
+      IdentityProvider__AdminPassword: ${API_ADMIN_PASSWORD}
+    depends_on:
+      db:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+    networks:
+      ballast-lane-net:
+        ipv4_address: 172.31.240.4
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "${GATEWAY_PORT}:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+      - keycloak
+    networks:
+      ballast-lane-net:
+        ipv4_address: 172.31.240.5
+
+volumes:
+  db-data:
+
+networks:
+  ballast-lane-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.240.0/24

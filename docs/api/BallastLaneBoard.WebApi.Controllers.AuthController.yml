@@ -1,0 +1,575 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController
+  commentId: T:BallastLaneBoard.WebApi.Controllers.AuthController
+  id: AuthController
+  parent: BallastLaneBoard.WebApi.Controllers
+  children:
+  - BallastLaneBoard.WebApi.Controllers.AuthController.#ctor(BallastLaneBoard.Application.Identity.UserService)
+  - BallastLaneBoard.WebApi.Controllers.AuthController.Me(System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.AuthController.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  - BallastLaneBoard.WebApi.Controllers.AuthController.Sync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: AuthController
+  nameWithType: AuthController
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: AuthController
+    path: ../src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Authentication and user management endpoints.
+  example: []
+  syntax:
+    content: >-
+      [ApiController]
+
+      [Route("api/[controller]")]
+
+      public class AuthController : ControllerBase
+    content.vb: >-
+      <ApiController>
+
+      <Route("api/[controller]")>
+
+      Public Class AuthController Inherits ControllerBase
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.Mvc.ControllerBase
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.ApiControllerAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ApiControllerAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: api/[controller]
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.#ctor(BallastLaneBoard.Application.Identity.UserService)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.AuthController.#ctor(BallastLaneBoard.Application.Identity.UserService)
+  id: '#ctor(BallastLaneBoard.Application.Identity.UserService)'
+  parent: BallastLaneBoard.WebApi.Controllers.AuthController
+  langs:
+  - csharp
+  - vb
+  name: AuthController(UserService)
+  nameWithType: AuthController.AuthController(UserService)
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.AuthController(BallastLaneBoard.Application.Identity.UserService)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Authentication and user management endpoints.
+  example: []
+  syntax:
+    content: public AuthController(UserService userService)
+    parameters:
+    - id: userService
+      type: BallastLaneBoard.Application.Identity.UserService
+    content.vb: Public Sub New(userService As UserService)
+  overload: BallastLaneBoard.WebApi.Controllers.AuthController.#ctor*
+  nameWithType.vb: AuthController.New(UserService)
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.AuthController.New(BallastLaneBoard.Application.Identity.UserService)
+  name.vb: New(UserService)
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.AuthController.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  id: Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest,System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.AuthController
+  langs:
+  - csharp
+  - vb
+  name: Register(RegisterRequest, CancellationToken)
+  nameWithType: AuthController.Register(RegisterRequest, CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Register(BallastLaneBoard.Application.Identity.Models.RegisterRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Register
+    path: ../src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+    startLine: 17
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Registers a new user via the identity provider and mirrors locally.
+  example: []
+  syntax:
+    content: >-
+      [HttpPost("register")]
+
+      [AllowAnonymous]
+
+      public Task<IActionResult> Register(RegisterRequest request, CancellationToken ct)
+    parameters:
+    - id: request
+      type: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpPost("register")>
+
+      <AllowAnonymous>
+
+      Public Function Register(request As RegisterRequest, ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.AuthController.Register*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: register
+  - type: Microsoft.AspNetCore.Authorization.AllowAnonymousAttribute
+    ctor: Microsoft.AspNetCore.Authorization.AllowAnonymousAttribute.#ctor
+    arguments: []
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Me(System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.AuthController.Me(System.Threading.CancellationToken)
+  id: Me(System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.AuthController
+  langs:
+  - csharp
+  - vb
+  name: Me(CancellationToken)
+  nameWithType: AuthController.Me(CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Me(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Me
+    path: ../src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+    startLine: 28
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Returns the current authenticated user's profile.
+  example: []
+  syntax:
+    content: >-
+      [HttpGet("me")]
+
+      [Authorize]
+
+      public Task<IActionResult> Me(CancellationToken ct)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpGet("me")>
+
+      <Authorize>
+
+      Public Function [Me](ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.AuthController.Me*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: me
+  - type: Microsoft.AspNetCore.Authorization.AuthorizeAttribute
+    ctor: Microsoft.AspNetCore.Authorization.AuthorizeAttribute.#ctor
+    arguments: []
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Sync(System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.AuthController.Sync(System.Threading.CancellationToken)
+  id: Sync(System.Threading.CancellationToken)
+  parent: BallastLaneBoard.WebApi.Controllers.AuthController
+  langs:
+  - csharp
+  - vb
+  name: Sync(CancellationToken)
+  nameWithType: AuthController.Sync(CancellationToken)
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Sync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Sync
+    path: ../src/BallastLaneBoard.WebApi/Controllers/AuthController.cs
+    startLine: 40
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  summary: Syncs the current user's last-seen timestamp.
+  example: []
+  syntax:
+    content: >-
+      [HttpPost("sync")]
+
+      [Authorize]
+
+      public Task<IActionResult> Sync(CancellationToken ct)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+    content.vb: >-
+      <HttpPost("sync")>
+
+      <Authorize>
+
+      Public Function Sync(ct As CancellationToken) As Task(Of IActionResult)
+  overload: BallastLaneBoard.WebApi.Controllers.AuthController.Sync*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sync
+  - type: Microsoft.AspNetCore.Authorization.AuthorizeAttribute
+    ctor: Microsoft.AspNetCore.Authorization.AuthorizeAttribute.#ctor
+    arguments: []
+references:
+- uid: BallastLaneBoard.WebApi.Controllers
+  commentId: N:BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.WebApi.Controllers
+  nameWithType: BallastLaneBoard.WebApi.Controllers
+  fullName: BallastLaneBoard.WebApi.Controllers
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase
+  commentId: T:Microsoft.AspNetCore.Mvc.ControllerBase
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: ControllerBase
+  nameWithType: ControllerBase
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.Mvc
+  commentId: N:Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc
+  nameWithType: Microsoft.AspNetCore.Mvc
+  fullName: Microsoft.AspNetCore.Mvc
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.#ctor*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.AuthController.#ctor
+  href: BallastLaneBoard.WebApi.Controllers.AuthController.html#BallastLaneBoard_WebApi_Controllers_AuthController__ctor_BallastLaneBoard_Application_Identity_UserService_
+  name: AuthController
+  nameWithType: AuthController.AuthController
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.AuthController
+  nameWithType.vb: AuthController.New
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.AuthController.New
+  name.vb: New
+- uid: BallastLaneBoard.Application.Identity.UserService
+  commentId: T:BallastLaneBoard.Application.Identity.UserService
+  parent: BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.Application.Identity.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: BallastLaneBoard.Application.Identity.UserService
+- uid: BallastLaneBoard.Application.Identity
+  commentId: N:BallastLaneBoard.Application.Identity
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity
+  nameWithType: BallastLaneBoard.Application.Identity
+  fullName: BallastLaneBoard.Application.Identity
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Register*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.AuthController.Register
+  href: BallastLaneBoard.WebApi.Controllers.AuthController.html#BallastLaneBoard_WebApi_Controllers_AuthController_Register_BallastLaneBoard_Application_Identity_Models_RegisterRequest_System_Threading_CancellationToken_
+  name: Register
+  nameWithType: AuthController.Register
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Register
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  commentId: T:BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  parent: BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html
+  name: RegisterRequest
+  nameWithType: RegisterRequest
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  commentId: T:System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Microsoft.AspNetCore.Mvc.IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Mvc.IActionResult
+    name: IActionResult
+    isExternal: true
+  - name: )
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Me*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.AuthController.Me
+  href: BallastLaneBoard.WebApi.Controllers.AuthController.html#BallastLaneBoard_WebApi_Controllers_AuthController_Me_System_Threading_CancellationToken_
+  name: Me
+  nameWithType: AuthController.Me
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Me
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController.Sync*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.AuthController.Sync
+  href: BallastLaneBoard.WebApi.Controllers.AuthController.html#BallastLaneBoard_WebApi_Controllers_AuthController_Sync_System_Threading_CancellationToken_
+  name: Sync
+  nameWithType: AuthController.Sync
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController.Sync

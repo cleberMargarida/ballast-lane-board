@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  commentId: T:BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  id: IUnitOfWork
+  parent: BallastLaneBoard.Application.Abstractions
+  children:
+  - BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  - BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  type: Interface
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: IUnitOfWork
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 7
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  summary: Represents a unit of work that encapsulates a set of changes to be committed atomically.
+  example: []
+  syntax:
+    content: public interface IUnitOfWork
+    content.vb: Public Interface IUnitOfWork
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  commentId: M:BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  id: Commit
+  parent: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Commit()
+  nameWithType: IUnitOfWork.Commit()
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit()
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Commit
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 9
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: Task Commit()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function Commit() As Task
+  overload: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit*
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  commentId: M:BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  id: Commit(System.Threading.CancellationToken)
+  parent: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Commit(CancellationToken)
+  nameWithType: IUnitOfWork.Commit(CancellationToken)
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Commit
+    path: ../src/BallastLaneBoard.Application/Abstractions/IUnitOfWork.cs
+    startLine: 11
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Abstractions
+  syntax:
+    content: Task Commit(CancellationToken cancellationToken)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function Commit(cancellationToken As CancellationToken) As Task
+  overload: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit*
+references:
+- uid: BallastLaneBoard.Application.Abstractions
+  commentId: N:BallastLaneBoard.Application.Abstractions
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Abstractions
+  nameWithType: BallastLaneBoard.Application.Abstractions
+  fullName: BallastLaneBoard.Application.Abstractions
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Abstractions
+    name: Abstractions
+    href: BallastLaneBoard.Application.Abstractions.html
+- uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit*
+  commentId: Overload:BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+  href: BallastLaneBoard.Application.Abstractions.IUnitOfWork.html#BallastLaneBoard_Application_Abstractions_IUnitOfWork_Commit
+  name: Commit
+  nameWithType: IUnitOfWork.Commit
+  fullName: BallastLaneBoard.Application.Abstractions.IUnitOfWork.Commit
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading

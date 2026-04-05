@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  commentId: T:BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  id: RegisterRequest
+  parent: BallastLaneBoard.Application.Identity.Models
+  children:
+  - BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor(System.String,System.String,System.String)
+  - BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+  - BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password
+  - BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+  langs:
+  - csharp
+  - vb
+  name: RegisterRequest
+  nameWithType: RegisterRequest
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: RegisterRequest
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public sealed record RegisterRequest
+    content.vb: Public NotInheritable Class RegisterRequest
+  inheritance:
+  - System.Object
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor(System.String,System.String,System.String)
+  commentId: M:BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  langs:
+  - csharp
+  - vb
+  name: RegisterRequest(string, string, string)
+  nameWithType: RegisterRequest.RegisterRequest(string, string, string)
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.RegisterRequest(string, string, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: .ctor
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public RegisterRequest(string Username, string Email, string Password)
+    parameters:
+    - id: Username
+      type: System.String
+    - id: Email
+      type: System.String
+    - id: Password
+      type: System.String
+    content.vb: Public Sub New(Username As String, Email As String, Password As String)
+  overload: BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor*
+  nameWithType.vb: RegisterRequest.New(String, String, String)
+  fullName.vb: BallastLaneBoard.Application.Identity.Models.RegisterRequest.New(String, String, String)
+  name.vb: New(String, String, String)
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+  commentId: P:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+  id: Username
+  parent: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: RegisterRequest.Username
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Username
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public string Username { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username*
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+  commentId: P:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+  id: Email
+  parent: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: RegisterRequest.Email
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Email
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public string Email { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email*
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password
+  commentId: P:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password
+  id: Password
+  parent: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: RegisterRequest.Password
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password
+  type: Property
+  source:
+    remote:
+      path: src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: Password
+    path: ../src/BallastLaneBoard.Application/Identity/Models/UserModels.cs
+    startLine: 4
+  assemblies:
+  - BallastLaneBoard.Application
+  namespace: BallastLaneBoard.Application.Identity.Models
+  syntax:
+    content: public string Password { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password*
+references:
+- uid: BallastLaneBoard.Application.Identity.Models
+  commentId: N:BallastLaneBoard.Application.Identity.Models
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Application.Identity.Models
+  nameWithType: BallastLaneBoard.Application.Identity.Models
+  fullName: BallastLaneBoard.Application.Identity.Models
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Application
+    name: Application
+    href: BallastLaneBoard.Application.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity
+    name: Identity
+    href: BallastLaneBoard.Application.Identity.html
+  - name: .
+  - uid: BallastLaneBoard.Application.Identity.Models
+    name: Models
+    href: BallastLaneBoard.Application.Identity.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.RegisterRequest.#ctor
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html#BallastLaneBoard_Application_Identity_Models_RegisterRequest__ctor_System_String_System_String_System_String_
+  name: RegisterRequest
+  nameWithType: RegisterRequest.RegisterRequest
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.RegisterRequest
+  nameWithType.vb: RegisterRequest.New
+  fullName.vb: BallastLaneBoard.Application.Identity.Models.RegisterRequest.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html#BallastLaneBoard_Application_Identity_Models_RegisterRequest_Username
+  name: Username
+  nameWithType: RegisterRequest.Username
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Username
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html#BallastLaneBoard_Application_Identity_Models_RegisterRequest_Email
+  name: Email
+  nameWithType: RegisterRequest.Email
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Email
+- uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password*
+  commentId: Overload:BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password
+  href: BallastLaneBoard.Application.Identity.Models.RegisterRequest.html#BallastLaneBoard_Application_Identity_Models_RegisterRequest_Password
+  name: Password
+  nameWithType: RegisterRequest.Password
+  fullName: BallastLaneBoard.Application.Identity.Models.RegisterRequest.Password

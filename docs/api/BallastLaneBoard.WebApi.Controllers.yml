@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi.Controllers
+  commentId: N:BallastLaneBoard.WebApi.Controllers
+  id: BallastLaneBoard.WebApi.Controllers
+  children:
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  - BallastLaneBoard.WebApi.Controllers.AuthController
+  - BallastLaneBoard.WebApi.Controllers.TasksController
+  langs:
+  - csharp
+  - vb
+  name: BallastLaneBoard.WebApi.Controllers
+  nameWithType: BallastLaneBoard.WebApi.Controllers
+  fullName: BallastLaneBoard.WebApi.Controllers
+  type: Namespace
+  assemblies:
+  - BallastLaneBoard.WebApi
+references:
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  commentId: T:BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  parent: BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html
+  name: ApiControllerBase
+  nameWithType: ApiControllerBase
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+- uid: BallastLaneBoard.WebApi.Controllers.AuthController
+  commentId: T:BallastLaneBoard.WebApi.Controllers.AuthController
+  href: BallastLaneBoard.WebApi.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: BallastLaneBoard.WebApi.Controllers.AuthController
+- uid: BallastLaneBoard.WebApi.Controllers.TasksController
+  commentId: T:BallastLaneBoard.WebApi.Controllers.TasksController
+  href: BallastLaneBoard.WebApi.Controllers.TasksController.html
+  name: TasksController
+  nameWithType: TasksController
+  fullName: BallastLaneBoard.WebApi.Controllers.TasksController
+- uid: BallastLaneBoard.WebApi.Controllers
+  commentId: N:BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.WebApi.Controllers
+  nameWithType: BallastLaneBoard.WebApi.Controllers
+  fullName: BallastLaneBoard.WebApi.Controllers
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html

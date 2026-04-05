@@ -1,0 +1,164 @@
+### YamlMime:TableOfContent
+items:
+- uid: BallastLaneBoard.Application
+  name: BallastLaneBoard.Application
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.ServiceCollectionExtensions
+    name: ServiceCollectionExtensions
+    type: Class
+- uid: BallastLaneBoard.Application.Abstractions
+  name: BallastLaneBoard.Application.Abstractions
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.Abstractions.ApplicationError
+    name: ApplicationError
+    type: Enum
+  - uid: BallastLaneBoard.Application.Abstractions.IRepository`1
+    name: IRepository<TEntity>
+    type: Interface
+  - uid: BallastLaneBoard.Application.Abstractions.IUnitOfWork
+    name: IUnitOfWork
+    type: Interface
+- uid: BallastLaneBoard.Application.Identity
+  name: BallastLaneBoard.Application.Identity
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.Identity.IIdentityProviderClient
+    name: IIdentityProviderClient
+    type: Interface
+  - uid: BallastLaneBoard.Application.Identity.IUserUoW
+    name: IUserUoW
+    type: Interface
+  - uid: BallastLaneBoard.Application.Identity.UserService
+    name: UserService
+    type: Class
+- uid: BallastLaneBoard.Application.Identity.Models
+  name: BallastLaneBoard.Application.Identity.Models
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.Identity.Models.RegisterRequest
+    name: RegisterRequest
+    type: Class
+  - uid: BallastLaneBoard.Application.Identity.Models.UserResponse
+    name: UserResponse
+    type: Class
+- uid: BallastLaneBoard.Application.TaskManagement
+  name: BallastLaneBoard.Application.TaskManagement
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.TaskManagement.ITaskUoW
+    name: ITaskUoW
+    type: Interface
+  - uid: BallastLaneBoard.Application.TaskManagement.TaskService
+    name: TaskService
+    type: Class
+- uid: BallastLaneBoard.Application.TaskManagement.Models
+  name: BallastLaneBoard.Application.TaskManagement.Models
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Application.TaskManagement.Models.ChangeTaskStatusRequest
+    name: ChangeTaskStatusRequest
+    type: Class
+  - uid: BallastLaneBoard.Application.TaskManagement.Models.CreateTaskRequest
+    name: CreateTaskRequest
+    type: Class
+  - uid: BallastLaneBoard.Application.TaskManagement.Models.TaskResponse
+    name: TaskResponse
+    type: Class
+  - uid: BallastLaneBoard.Application.TaskManagement.Models.UpdateTaskRequest
+    name: UpdateTaskRequest
+    type: Class
+- uid: BallastLaneBoard.Domain.Core
+  name: BallastLaneBoard.Domain.Core
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Domain.Core.IAggregateRoot
+    name: IAggregateRoot
+    type: Interface
+  - uid: BallastLaneBoard.Domain.Core.IAggregateRoot`1
+    name: IAggregateRoot<TId>
+    type: Interface
+  - uid: BallastLaneBoard.Domain.Core.IEntity
+    name: IEntity
+    type: Interface
+  - uid: BallastLaneBoard.Domain.Core.IEntity`1
+    name: IEntity<TId>
+    type: Interface
+  - uid: BallastLaneBoard.Domain.Core.Result
+    name: Result
+    type: Struct
+  - uid: BallastLaneBoard.Domain.Core.ResultExtensions
+    name: ResultExtensions
+    type: Class
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result<T>
+    type: Struct
+- uid: BallastLaneBoard.Domain.Identity
+  name: BallastLaneBoard.Domain.Identity
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Domain.Identity.AppUser
+    name: AppUser
+    type: Class
+  - uid: BallastLaneBoard.Domain.Identity.UserError
+    name: UserError
+    type: Enum
+  - uid: BallastLaneBoard.Domain.Identity.UserRole
+    name: UserRole
+    type: Enum
+- uid: BallastLaneBoard.Domain.TaskManagement
+  name: BallastLaneBoard.Domain.TaskManagement
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Domain.TaskManagement.TaskError
+    name: TaskError
+    type: Enum
+  - uid: BallastLaneBoard.Domain.TaskManagement.TaskItem
+    name: TaskItem
+    type: Class
+  - uid: BallastLaneBoard.Domain.TaskManagement.TaskItemStatus
+    name: TaskItemStatus
+    type: Enum
+- uid: BallastLaneBoard.Infra
+  name: BallastLaneBoard.Infra
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Infra.ServiceCollectionExtensions
+    name: ServiceCollectionExtensions
+    type: Class
+- uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.Task
+  name: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.Task
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.Task.InitialCreate
+    name: InitialCreate
+    type: Class
+- uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  name: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.Infra.EntityFrameworkCore.Migrations.User.InitialCreate
+    name: InitialCreate
+    type: Class
+- uid: BallastLaneBoard.WebApi
+  name: BallastLaneBoard.WebApi
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.WebApi.AngularSpaHostingExtensions
+    name: AngularSpaHostingExtensions
+    type: Class
+- uid: BallastLaneBoard.WebApi.Controllers
+  name: BallastLaneBoard.WebApi.Controllers
+  type: Namespace
+  items:
+  - uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+    name: ApiControllerBase
+    type: Class
+  - uid: BallastLaneBoard.WebApi.Controllers.AuthController
+    name: AuthController
+    type: Class
+  - uid: BallastLaneBoard.WebApi.Controllers.TasksController
+    name: TasksController
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,360 @@
+### YamlMime:ManagedReference
+items:
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  commentId: T:BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  id: ApiControllerBase
+  parent: BallastLaneBoard.WebApi.Controllers
+  children:
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  - BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  langs:
+  - csharp
+  - vb
+  name: ApiControllerBase
+  nameWithType: ApiControllerBase
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  type: Class
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: ApiControllerBase
+    path: ../src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+    startLine: 10
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  syntax:
+    content: 'public abstract class ApiControllerBase : ControllerBase'
+    content.vb: Public MustInherit Class ApiControllerBase Inherits ControllerBase
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.Mvc.ControllerBase
+  derivedClasses:
+  - BallastLaneBoard.WebApi.Controllers.TasksController
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  id: OkOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0})
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  langs:
+  - csharp
+  - vb
+  name: OkOrBadRequest<T>(Result<T>)
+  nameWithType: ApiControllerBase.OkOrBadRequest<T>(Result<T>)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: OkOrBadRequest
+    path: ../src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+    startLine: 12
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  syntax:
+    content: protected IActionResult OkOrBadRequest<T>(Result<T> result)
+    parameters:
+    - id: result
+      type: BallastLaneBoard.Domain.Core.Result{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Protected Function OkOrBadRequest(Of T)(result As Result(Of T)) As IActionResult
+  overload: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest*
+  nameWithType.vb: ApiControllerBase.OkOrBadRequest(Of T)(Result(Of T))
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T))
+  name.vb: OkOrBadRequest(Of T)(Result(Of T))
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  id: NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  langs:
+  - csharp
+  - vb
+  name: NoContentOrBadRequest(Result)
+  nameWithType: ApiControllerBase.NoContentOrBadRequest(Result)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest(BallastLaneBoard.Domain.Core.Result)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: NoContentOrBadRequest
+    path: ../src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+    startLine: 20
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  syntax:
+    content: protected IActionResult NoContentOrBadRequest(Result result)
+    parameters:
+    - id: result
+      type: BallastLaneBoard.Domain.Core.Result
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Protected Function NoContentOrBadRequest(result As Result) As IActionResult
+  overload: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest*
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  commentId: M:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  id: CreatedAtOrBadRequest``1(BallastLaneBoard.Domain.Core.Result{``0},System.String,System.Object)
+  parent: BallastLaneBoard.WebApi.Controllers.ApiControllerBase
+  langs:
+  - csharp
+  - vb
+  name: CreatedAtOrBadRequest<T>(Result<T>, string, object?)
+  nameWithType: ApiControllerBase.CreatedAtOrBadRequest<T>(Result<T>, string, object?)
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest<T>(BallastLaneBoard.Domain.Core.Result<T>, string, object?)
+  type: Method
+  source:
+    remote:
+      path: src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+      branch: master
+      repo: https://github.com/cleberMargarida/ballast-lane-board.git
+    id: CreatedAtOrBadRequest
+    path: ../src/BallastLaneBoard.WebApi/Controllers/ApiControllerBase.cs
+    startLine: 28
+  assemblies:
+  - BallastLaneBoard.WebApi
+  namespace: BallastLaneBoard.WebApi.Controllers
+  syntax:
+    content: protected IActionResult CreatedAtOrBadRequest<T>(Result<T> result, string actionName, object? routeValues)
+    parameters:
+    - id: result
+      type: BallastLaneBoard.Domain.Core.Result{{T}}
+    - id: actionName
+      type: System.String
+    - id: routeValues
+      type: System.Object
+    typeParameters:
+    - id: T
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Protected Function CreatedAtOrBadRequest(Of T)(result As Result(Of T), actionName As String, routeValues As Object) As IActionResult
+  overload: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest*
+  nameWithType.vb: ApiControllerBase.CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+  fullName.vb: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest(Of T)(BallastLaneBoard.Domain.Core.Result(Of T), String, Object)
+  name.vb: CreatedAtOrBadRequest(Of T)(Result(Of T), String, Object)
+references:
+- uid: BallastLaneBoard.WebApi.Controllers
+  commentId: N:BallastLaneBoard.WebApi.Controllers
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.WebApi.Controllers
+  nameWithType: BallastLaneBoard.WebApi.Controllers
+  fullName: BallastLaneBoard.WebApi.Controllers
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi
+    name: WebApi
+    href: BallastLaneBoard.WebApi.html
+  - name: .
+  - uid: BallastLaneBoard.WebApi.Controllers
+    name: Controllers
+    href: BallastLaneBoard.WebApi.Controllers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase
+  commentId: T:Microsoft.AspNetCore.Mvc.ControllerBase
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: ControllerBase
+  nameWithType: ControllerBase
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.Mvc
+  commentId: N:Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Mvc
+  nameWithType: Microsoft.AspNetCore.Mvc
+  fullName: Microsoft.AspNetCore.Mvc
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Mvc
+    name: Mvc
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_OkOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__
+  name: OkOrBadRequest
+  nameWithType: ApiControllerBase.OkOrBadRequest
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.OkOrBadRequest
+- uid: BallastLaneBoard.Domain.Core.Result{{T}}
+  commentId: T:BallastLaneBoard.Domain.Core.Result{``0}
+  parent: BallastLaneBoard.Domain.Core
+  definition: BallastLaneBoard.Domain.Core.Result`1
+  href: BallastLaneBoard.Domain.Core.Result-1.html
+  name: Result<T>
+  nameWithType: Result<T>
+  fullName: BallastLaneBoard.Domain.Core.Result<T>
+  nameWithType.vb: Result(Of T)
+  fullName.vb: BallastLaneBoard.Domain.Core.Result(Of T)
+  name.vb: Result(Of T)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+- uid: BallastLaneBoard.Domain.Core.Result`1
+  commentId: T:BallastLaneBoard.Domain.Core.Result`1
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.Result-1.html
+  name: Result<T>
+  nameWithType: Result<T>
+  fullName: BallastLaneBoard.Domain.Core.Result<T>
+  nameWithType.vb: Result(Of T)
+  fullName.vb: BallastLaneBoard.Domain.Core.Result(Of T)
+  name.vb: Result(Of T)
+  spec.csharp:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BallastLaneBoard.Domain.Core.Result`1
+    name: Result
+    href: BallastLaneBoard.Domain.Core.Result-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BallastLaneBoard.Domain.Core
+  commentId: N:BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.html
+  name: BallastLaneBoard.Domain.Core
+  nameWithType: BallastLaneBoard.Domain.Core
+  fullName: BallastLaneBoard.Domain.Core
+  spec.csharp:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html
+  spec.vb:
+  - uid: BallastLaneBoard
+    name: BallastLaneBoard
+    href: BallastLaneBoard.html
+  - name: .
+  - uid: BallastLaneBoard.Domain
+    name: Domain
+    href: BallastLaneBoard.Domain.html
+  - name: .
+  - uid: BallastLaneBoard.Domain.Core
+    name: Core
+    href: BallastLaneBoard.Domain.Core.html
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_NoContentOrBadRequest_BallastLaneBoard_Domain_Core_Result_
+  name: NoContentOrBadRequest
+  nameWithType: ApiControllerBase.NoContentOrBadRequest
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.NoContentOrBadRequest
+- uid: BallastLaneBoard.Domain.Core.Result
+  commentId: T:BallastLaneBoard.Domain.Core.Result
+  parent: BallastLaneBoard.Domain.Core
+  href: BallastLaneBoard.Domain.Core.Result.html
+  name: Result
+  nameWithType: Result
+  fullName: BallastLaneBoard.Domain.Core.Result
+- uid: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest*
+  commentId: Overload:BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest
+  href: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.html#BallastLaneBoard_WebApi_Controllers_ApiControllerBase_CreatedAtOrBadRequest__1_BallastLaneBoard_Domain_Core_Result___0__System_String_System_Object_
+  name: CreatedAtOrBadRequest
+  nameWithType: ApiControllerBase.CreatedAtOrBadRequest
+  fullName: BallastLaneBoard.WebApi.Controllers.ApiControllerBase.CreatedAtOrBadRequest
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

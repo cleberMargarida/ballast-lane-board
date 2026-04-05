@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BallastLaneBoard.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="BallastLaneBoard.Infra" />
+    <InternalsVisibleTo Include="BallastLaneBoard.Domain.UnitTests" />
+  </ItemGroup>
+
+</Project>

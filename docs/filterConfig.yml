@@ -1,0 +1,13 @@
+apiRules:
+  - include:
+      uidRegex: ^BallastLaneBoard
+  - exclude:
+      uidRegex: ^System\.
+  - exclude:
+      uidRegex: ^Microsoft\.
+  - exclude:
+      hasAttribute:
+        uid: System.Runtime.CompilerServices.CompilerGeneratedAttribute
+  - exclude:
+      hasAttribute:
+        uid: System.CodeDom.Compiler.GeneratedCodeAttribute
