@@ -1,4 +1,6 @@
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Text.Json;
 using BallastLaneBoard.Application.Identity.Models;
 
 namespace BallastLaneBoard.WebApi.IntegrationTests.Infrastructure;
@@ -61,15 +63,44 @@ public sealed class ApiFixture : IAsyncLifetime
     public HttpClient CreateClient() => _factory!.CreateClient();
 
     /// <summary>
-    /// Fetches a real JWT from Keycloak for <paramref name="username"/> and
-    /// returns an HTTP client pre-configured with that bearer token.
+    /// Fetches a real JWT from Keycloak (using <c>OpenIdConnect__Authority</c> from the
+    /// environment) and returns an HTTP client that injects the bearer token via a
+    /// <see cref="DelegatingHandler"/> — no direct dependency on
+    /// <see cref="KeycloakFixture.Instance"/>.
     /// </summary>
     public async Task<HttpClient> CreateAuthenticatedClientAsync(
         string username, string password, CancellationToken ct = default)
     {
-        var token  = await KeycloakFixture.Instance.GetTokenAsync(username, password, ct);
-        var client = _factory!.CreateClient();
-        client.DefaultRequestHeaders.Authorization = new("Bearer", token);
-        return client;
+        var authority     = Environment.GetEnvironmentVariable("OpenIdConnect__Authority")!;
+        var tokenEndpoint = $"{authority}/protocol/openid-connect/token";
+
+        using var tokenHttp = new HttpClient();
+        var response = await tokenHttp.PostAsync(tokenEndpoint,
+            new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                ["grant_type"] = "password",
+                ["client_id"]  = "test-client",
+                ["username"]   = username,
+                ["password"]   = password,
+            }), ct);
+
+        if (!response.IsSuccessStatusCode)
+            throw new HttpRequestException(
+                $"Keycloak token request failed ({response.StatusCode}): {await response.Content.ReadAsStringAsync(ct)}");
+
+        using var doc = JsonDocument.Parse(await response.Content.ReadAsStringAsync(ct));
+        var token = doc.RootElement.GetProperty("access_token").GetString()!;
+
+        return _factory!.CreateDefaultClient(new BearerTokenHandler(token));
+    }
+
+    private sealed class BearerTokenHandler(string token) : DelegatingHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(
+            HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            return base.SendAsync(request, cancellationToken);
+        }
     }
 }

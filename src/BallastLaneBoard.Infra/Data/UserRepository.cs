@@ -5,10 +5,11 @@ using NpgsqlTypes;
 
 namespace BallastLaneBoard.Infra.Data;
 
-internal sealed class UserRepository(NpgsqlConnection connection, NpgsqlTransaction transaction) : IUserRepository
+internal sealed class UserRepository(Task<(NpgsqlConnection Connection, NpgsqlTransaction Transaction)> contextTask) : IUserRepository
 {
     public async Task AddAsync(AppUser entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             INSERT INTO app."AppUser" ("Id", "ExternalSubject", "Username", "Email", "Role", "CreatedAt", "LastSeenAt")
             VALUES ($1, $2, $3, $4, $5, $6, $7)
@@ -28,6 +29,7 @@ internal sealed class UserRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task UpdateAsync(AppUser entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             UPDATE app."AppUser"
             SET "Username" = $1, "Email" = $2, "Role" = $3, "LastSeenAt" = $4
@@ -46,6 +48,7 @@ internal sealed class UserRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task RemoveAsync(AppUser entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """DELETE FROM app."AppUser" WHERE "Id" = $1""";
 
         await using var cmd = new NpgsqlCommand(sql, connection, transaction);
@@ -56,6 +59,7 @@ internal sealed class UserRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task<AppUser?> FindAsync(Guid id, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             SELECT "Id", "ExternalSubject", "Username", "Email", "Role", "CreatedAt", "LastSeenAt"
             FROM app."AppUser"
@@ -71,6 +75,7 @@ internal sealed class UserRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task<AppUser?> FindBySubjectAsync(string externalSubject, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             SELECT "Id", "ExternalSubject", "Username", "Email", "Role", "CreatedAt", "LastSeenAt"
             FROM app."AppUser"

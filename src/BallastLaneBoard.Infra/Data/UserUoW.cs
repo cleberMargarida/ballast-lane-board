@@ -3,12 +3,8 @@ using Npgsql;
 
 namespace BallastLaneBoard.Infra.Data;
 
-internal sealed class UserUoW : DbConnectionUoW, IUserUoW
+internal sealed class UserUoW(NpgsqlDataSource dataSource) : DbConnectionUoW(dataSource), IUserUoW
 {
-    public UserUoW(NpgsqlDataSource dataSource) : base(dataSource)
-    {
-        Users = new UserRepository(Connection, Transaction);
-    }
-
-    public IUserRepository Users { get; }
+    private UserRepository? _users;
+    public IUserRepository Users => _users ??= new UserRepository(GetContextAsync());
 }

@@ -8,7 +8,7 @@ using BallastLaneBoard.WebApi.IntegrationTests.Infrastructure;
 namespace BallastLaneBoard.WebApi.IntegrationTests;
 
 [Collection("Integration")]
-public class TasksControllerTests(ApiFixture api)
+public class TasksControllerTests(ApiFactory api)
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -155,11 +155,11 @@ public class TasksControllerTests(ApiFixture api)
     // ── Helpers ───────────────────────────────────────────────────────────
 
     private Task<HttpClient> CreateUser1ClientAsync(CancellationToken ct) =>
-        api.CreateAuthenticatedClientAsync(ApiFixture.User1Name, ApiFixture.User1Password, ct);
+        api.CreateAuthenticatedClientAsync(ApiFactory.User1Name, ApiFactory.User1Password, ct);
 
     private Task<HttpClient> CreateUser2ClientAsync(CancellationToken ct) =>
-        api.CreateAuthenticatedClientAsync(ApiFixture.User2Name, ApiFixture.User2Password, ct);
+        api.CreateAuthenticatedClientAsync(ApiFactory.User2Name, ApiFactory.User2Password, ct);
 
     private Task<HttpClient> CreateAdminClientAsync(CancellationToken ct) =>
-        api.CreateAuthenticatedClientAsync(ApiFixture.AdminName, ApiFixture.AdminPassword, ct);
+        api.CreateAuthenticatedClientAsync(ApiFactory.AdminName, ApiFactory.AdminPassword, ct);
 }

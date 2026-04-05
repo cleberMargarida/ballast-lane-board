@@ -13,29 +13,27 @@ HTTP Request
     ↓
 [ApplicationService](ITaskUoW | IUserUoW)
     ↓ orchestrates
-[Domain Aggregate].Create() → Result<ICreated<Aggregate, Event>>
-[Domain Aggregate].Command() → Result<DomainEvent>
+[Domain Aggregate].Create() → Result<TEntity>
+[Domain Aggregate].Command() → Result
     ↓ on success
-uow.Repository.Add(entity) + uow.Events.Produce(event) + await uow.Commit()
+uow.Repository.Add(entity) + await uow.Commit()
     ↓
 HTTP Response
 ```
 
 | Layer | Project | Responsibility |
 |---|---|---|
-| **Domain** | `BallastLaneBoard.Domain` | Entities, value objects, domain events, business rules. Zero dependencies. |
+| **Domain** | `BallastLaneBoard.Domain` | Entities, value objects, business rules. Zero dependencies. |
 | **Application** | `BallastLaneBoard.Application` | Services, DTOs, repository/UoW interfaces. Depends only on Domain. |
-| **Infrastructure** | `BallastLaneBoard.Infra` | Entity Framework Core, Keycloak Admin client, migration hosting. |
+| **Infrastructure** | `BallastLaneBoard.Infra` | Raw ADO.NET (Npgsql), Keycloak Admin client, migration hosting. |
 | **WebApi** | `BallastLaneBoard.WebApi` | ASP.NET composition root, controllers, Swagger, SPA middleware. |
 | **Client** | `BallastLaneBoard.ClientApp` | Angular 19 SPA with Tailwind CSS, OIDC integration. |
 
 ### Key Patterns
 
 - **Result\<T\>** — functional error handling; domain methods return `Result<T>` with `IsSuccess`/`IsFailed`/`Error`
-- **DbContextUow\<TEntity, TDomainEvent\>** — abstract EF DbContext + `IUnitOfWork` base; one concrete UoW per bounded context
-- **EFRepository\<T\>** — wraps `DbSet<T>` behind `IRepository<T> : IQueryable<T>`
-- **IProducer\<T\>** — in-process domain event collection within UoW boundary
-- **ICreated\<TEntity, TEvent\>** — tuple returned by aggregate factory methods pairing the new entity with its creation event
+- **DbConnectionUoW** — abstract Npgsql connection + transaction base; one concrete UoW per bounded context
+- **IRepository\<T\>** — per-aggregate repository interface backed by raw ADO.NET
 
 ---
 
@@ -154,16 +152,16 @@ ballast-lane-board/
 │   └── themes/ballast-lane-board/login/
 ├── src/
 │   ├── BallastLaneBoard.Domain/
-│   │   ├── Core/          (Result, IEntity, ICreated)
-│   │   ├── TaskManagement/ (TaskItem, TaskEvent, TaskError)
-│   │   └── Identity/       (AppUser, UserEvent, UserError)
+│   │   ├── Core/          (Result, IEntity)
+│   │   ├── TaskManagement/ (TaskItem, TaskError, TaskItemStatus)
+│   │   └── Identity/       (AppUser, UserError, UserRole)
 │   ├── BallastLaneBoard.Application/
-│   │   ├── Abstractions/   (IUnitOfWork, IRepository, IProducer)
+│   │   ├── Abstractions/   (IUnitOfWork, IRepository)
 │   │   ├── TaskManagement/ (TaskService, ITaskUoW, Models)
 │   │   └── Identity/       (UserService, IUserUoW, Models)
 │   ├── BallastLaneBoard.Infra/
-│   │   ├── EntityFrameworkCore/ (DbContextUow, EFRepository, TaskUoW, UserUoW)
-│   │   └── Keycloak/           (KeycloakAdminClient)
+│   │   ├── Data/           (DbConnectionUoW, TaskRepository, UserRepository, TaskUoW, UserUoW)
+│   │   └── Keycloak/       (KeycloakAdminClient)
 │   ├── BallastLaneBoard.WebApi/
 │   │   ├── Controllers/    (Tasks, Auth, Health)
 │   │   └── wwwroot/        (swagger-dark.css)
@@ -195,6 +193,7 @@ Workflow file: `.github/workflows/ci-cd.yml`
 - Push: `master`, `develop`
 - Pull request: all branches
 - Release published: image publish + Azure deploy
+- Manual dispatch (`workflow_dispatch`): documentation build + GitHub Pages deploy
 
 ### Required GitHub Secrets
 
@@ -227,9 +226,8 @@ The deploy job uses `.github/azure/docker-compose.appservice.yml` as the App Ser
 
 This project was scaffolded using AI-assisted development with GitHub Copilot (Claude). The architecture and patterns are adapted from the [dot-bet](../dot-bet) reference project, specifically:
 
-- **DbContextUow** unit-of-work pattern with per-bounded-context DbContexts
+- **DbConnectionUoW** unit-of-work with per-bounded-context Npgsql connections and transactions
 - **Result\<T\>** functional error handling without exceptions for business rule violations
-- **ICreated\<TEntity, TEvent\>** pattern pairing aggregate creation with domain events
 - **InMemory UoW test doubles** for fast, containerless unit testing
 
 Corrections and edge cases addressed during generation:

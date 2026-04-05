@@ -7,6 +7,7 @@ on:
     branches: ["*"]
   release:
     types: [published]
+  workflow_dispatch:
 
 env:
   REGISTRY: docker.io
@@ -260,7 +261,7 @@ jobs:
   documentation:
     name: Build and Deploy Documentation
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' && github.event_name == 'push' && hashFiles('docs/docfx.json') != ''
+    if: github.event_name == 'workflow_dispatch'
     permissions:
       contents: read
       pages: write

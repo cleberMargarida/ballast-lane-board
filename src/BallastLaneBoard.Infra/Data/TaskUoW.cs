@@ -3,12 +3,8 @@ using Npgsql;
 
 namespace BallastLaneBoard.Infra.Data;
 
-internal sealed class TaskUoW : DbConnectionUoW, ITaskUoW
+internal sealed class TaskUoW(NpgsqlDataSource dataSource) : DbConnectionUoW(dataSource), ITaskUoW
 {
-    public TaskUoW(NpgsqlDataSource dataSource) : base(dataSource)
-    {
-        Tasks = new TaskRepository(Connection, Transaction);
-    }
-
-    public ITaskRepository Tasks { get; }
+    private TaskRepository? _tasks;
+    public ITaskRepository Tasks => _tasks ??= new TaskRepository(GetContextAsync());
 }

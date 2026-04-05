@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Testcontainers.Keycloak;
 
 namespace BallastLaneBoard.WebApi.IntegrationTests.Infrastructure;
@@ -17,7 +16,6 @@ public sealed class KeycloakFixture : IAsyncLifetime
     internal static KeycloakFixture Instance { get; private set; } = null!;
 
     internal const string Realm = "ballast-lane-board";
-    private const string TestClientId = "test-client";
     private const string AdminUser = "admin";
     private const string AdminPass = "admin";
 
@@ -74,34 +72,5 @@ public sealed class KeycloakFixture : IAsyncLifetime
             Environment.SetEnvironmentVariable(name, null);
 
         await _container.DisposeAsync();
-    }
-
-    /// <summary>
-    /// Fetches a JWT access token from Keycloak via the test client password grant.
-    /// </summary>
-    internal async Task<string> GetTokenAsync(
-        string username, string password, CancellationToken ct = default)
-    {
-        using var http = new HttpClient();
-        var response = await http.PostAsync(
-            $"{_container.GetBaseAddress()}realms/{Realm}/protocol/openid-connect/token",
-            new FormUrlEncodedContent(new Dictionary<string, string>
-            {
-                ["grant_type"] = "password",
-                ["client_id"]  = TestClientId,
-                ["username"]   = username,
-                ["password"]   = password,
-            }),
-            ct);
-
-        if (!response.IsSuccessStatusCode)
-        {
-            var errorBody = await response.Content.ReadAsStringAsync(ct);
-            throw new HttpRequestException(
-                $"Keycloak token request failed ({response.StatusCode}): {errorBody}");
-        }
-        var body = await response.Content.ReadAsStringAsync(ct);
-        using var doc = JsonDocument.Parse(body);
-        return doc.RootElement.GetProperty("access_token").GetString()!;
     }
 }

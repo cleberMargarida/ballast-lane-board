@@ -4,4 +4,4 @@ namespace BallastLaneBoard.WebApi.IntegrationTests.Infrastructure;
 public sealed class IntegrationCollection
     : ICollectionFixture<PostgresFixture>,
       ICollectionFixture<KeycloakFixture>,
-      ICollectionFixture<ApiFixture>;
+      ICollectionFixture<ApiFactory>;

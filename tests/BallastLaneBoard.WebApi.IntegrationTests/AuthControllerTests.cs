@@ -6,7 +6,7 @@ using BallastLaneBoard.WebApi.IntegrationTests.Infrastructure;
 namespace BallastLaneBoard.WebApi.IntegrationTests;
 
 [Collection("Integration")]
-public class AuthControllerTests(ApiFixture api)
+public class AuthControllerTests(ApiFactory api)
 {
     [Fact]
     public async Task Register_ValidRequest_Returns201()
@@ -39,7 +39,7 @@ public class AuthControllerTests(ApiFixture api)
         // User1 was registered during ApiFixture.InitializeAsync with a real
         // Keycloak subject stored as ExternalSubject in the app DB.
         var client = await api.CreateAuthenticatedClientAsync(
-            ApiFixture.User1Name, ApiFixture.User1Password, ct);
+            ApiFactory.User1Name, ApiFactory.User1Password, ct);
 
         var response = await client.GetAsync("/api/auth/me", ct);
 
@@ -51,7 +51,7 @@ public class AuthControllerTests(ApiFixture api)
     {
         var ct = TestContext.Current.CancellationToken;
         var client = await api.CreateAuthenticatedClientAsync(
-            ApiFixture.User1Name, ApiFixture.User1Password, ct);
+            ApiFactory.User1Name, ApiFactory.User1Password, ct);
 
         var response = await client.PostAsync("/api/auth/sync", null, ct);
 

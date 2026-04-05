@@ -5,10 +5,11 @@ using NpgsqlTypes;
 
 namespace BallastLaneBoard.Infra.Data;
 
-internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransaction transaction) : ITaskRepository
+internal sealed class TaskRepository(Task<(NpgsqlConnection Connection, NpgsqlTransaction Transaction)> contextTask) : ITaskRepository
 {
     public async Task AddAsync(TaskItem entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             INSERT INTO app."TaskItem" ("Id", "Title", "Description", "Status", "DueDate", "UserId", "CreatedAt", "UpdatedAt")
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
@@ -29,6 +30,7 @@ internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task UpdateAsync(TaskItem entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             UPDATE app."TaskItem"
             SET "Title" = $1, "Description" = $2, "Status" = $3, "DueDate" = $4, "UpdatedAt" = $5
@@ -48,6 +50,7 @@ internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task RemoveAsync(TaskItem entity, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """DELETE FROM app."TaskItem" WHERE "Id" = $1""";
 
         await using var cmd = new NpgsqlCommand(sql, connection, transaction);
@@ -58,6 +61,7 @@ internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task<TaskItem?> FindAsync(Guid id, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             SELECT "Id", "Title", "Description", "Status", "DueDate", "UserId", "CreatedAt", "UpdatedAt"
             FROM app."TaskItem"
@@ -73,6 +77,7 @@ internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task<List<TaskItem>> GetAllOrderedAsync(CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             SELECT "Id", "Title", "Description", "Status", "DueDate", "UserId", "CreatedAt", "UpdatedAt"
             FROM app."TaskItem"
@@ -85,6 +90,7 @@ internal sealed class TaskRepository(NpgsqlConnection connection, NpgsqlTransact
 
     public async Task<List<TaskItem>> GetByUserIdOrderedAsync(Guid userId, CancellationToken cancellationToken)
     {
+        var (connection, transaction) = await contextTask;
         const string sql = """
             SELECT "Id", "Title", "Description", "Status", "DueDate", "UserId", "CreatedAt", "UpdatedAt"
             FROM app."TaskItem"
