@@ -11,6 +11,22 @@ A full-stack task management application built with **Clean Architecture**, **.N
 
 ---
 
+## Live Demo
+
+> **[https://ballast-lane-board.azurewebsites.net](https://ballast-lane-board.azurewebsites.net)**
+
+The application is deployed on **Azure App Service** as a multi-container Docker Compose app with **Azure PostgreSQL Flexible Server**. Three services — Nginx reverse proxy, .NET API (serving the Angular SPA), and Keycloak — run behind a single domain.
+
+| | URL |
+|---|---|
+| **Application** | [ballast-lane-board.azurewebsites.net](https://ballast-lane-board.azurewebsites.net) |
+| **Swagger UI** | [ballast-lane-board.azurewebsites.net/swagger](https://ballast-lane-board.azurewebsites.net/swagger) |
+| **Health Check** | [ballast-lane-board.azurewebsites.net/health](https://ballast-lane-board.azurewebsites.net/health) |
+
+Sign up at [/signup](https://ballast-lane-board.azurewebsites.net/signup) or use the demo credentials below.
+
+---
+
 ## Architecture
 <img width="1440" height="1312" alt="image" src="https://github.com/user-attachments/assets/448a7942-7eea-4ab6-9fd8-75ac4396b884" />
 

@@ -265,7 +265,9 @@ jobs:
             KC_HTTP_ENABLED="true" \
             KC_HTTP_PORT="8180" \
             KC_HOSTNAME_STRICT="false" \
-            KC_PROXY_HEADERS="xforwarded"
+            KC_PROXY_HEADERS="xforwarded" \
+            KC_BOOTSTRAP_ADMIN_USERNAME="admin" \
+            KC_BOOTSTRAP_ADMIN_PASSWORD="${{ secrets.KEYCLOAK_ADMIN_PASSWORD }}"
 
       - name: Deploy multi-container configuration
         run: |

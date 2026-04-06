@@ -18,8 +18,12 @@
       href: ../api-endpoints/auth.md
 - name: Deployment
   items:
-    - name: Docker
+    - name: Docker (Local)
       href: ../deployment/docker.md
+    - name: Azure App Service
+      href: ../deployment/azure.md
+- name: Current Status
+  href: ../status.md
 - name: Specification Compliance
   items:
     - name: Overview
