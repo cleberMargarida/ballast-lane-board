@@ -1,30 +1,18 @@
 # Ballast Lane Board — Task Management Platform
-<img width="2429" height="1511" alt="image" src="https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21" />
 
 [![.NET CI/CD](https://github.com/cleberMargarida/ballast-lane-board/actions/workflows/ci-cd.yml/badge.svg?branch=master)](https://github.com/cleberMargarida/ballast-lane-board/actions/workflows/ci-cd.yml)
 [![Docker](https://img.shields.io/docker/v/clebermargarida/ballast-lane-board?sort=semver&label=docker)](https://hub.docker.com/r/clebermargarida/ballast-lane-board)
 [![License](https://img.shields.io/badge/license-unlicensed-lightgrey)](#license)
 [![Coverage](https://img.shields.io/badge/coverage-58.49%25-yellow)](https://github.com/cleberMargarida/ballast-lane-board/actions/runs/24013117103)
 
+<img width="2429" height="1511" alt="image" src="https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21" />
+
 A full-stack task management application built with **Clean Architecture**, **.NET 10**, **Angular 19 + Tailwind CSS 4**, **PostgreSQL**, and **Keycloak OIDC**.
 
 ---
 
 ## Architecture
-
-```mermaid
-flowchart TD
-    Request[HTTP Request]
-    Controller[Controller / API Endpoint]
-    Application[Application Service<br/>ITaskUoW | IUserUoW]
-    Domain[Domain Aggregate<br/>Create() / Command()]
-    Persistence[Repository.Add(entity)<br/>await uow.Commit()]
-    Response[HTTP Response]
-
-    Request --> Controller --> Application
-    Application -->|orchestrates| Domain
-    Domain -->|success| Persistence --> Response
-```
+<img width="1440" height="1312" alt="image" src="https://github.com/user-attachments/assets/448a7942-7eea-4ab6-9fd8-75ac4396b884" />
 
 | Layer | Project | Responsibility |
 |---|---|---|
@@ -230,20 +218,3 @@ The deploy job uses `.github/azure/docker-compose.appservice.yml` as the App Ser
 ## License
 
 No license file is currently committed in this repository. Until one is added, treat the codebase as unlicensed / all rights reserved.
-
----
-
-## GenAI Exercise Notes
-
-This project was scaffolded using AI-assisted development with GitHub Copilot (Claude). The architecture and patterns are adapted from the [dot-bet](../dot-bet) reference project, specifically:
-
-- **DbConnectionUoW** unit-of-work with per-bounded-context Npgsql connections and transactions
-- **Result\<T\>** functional error handling without exceptions for business rule violations
-- **InMemory UoW test doubles** for fast, containerless unit testing
-
-Corrections and edge cases addressed during generation:
-- Status transition validation (only Pending→InProgress, InProgress→Completed, InProgress→Pending)
-- Ownership enforcement on all task mutations with admin bypass
-- Due date validation (must be in the future)
-- Email normalization (lowercase, trimmed)
-- Proper HTTP status code mapping (404 for not found, 403 for forbidden, 400 for validation)
