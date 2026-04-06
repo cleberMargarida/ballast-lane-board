@@ -20,7 +20,7 @@ The application is deployed on **Azure App Service** as a multi-container Docker
 | | URL |
 |---|---|
 | **Application** | [ballast-lane-board.azurewebsites.net](https://ballast-lane-board.azurewebsites.net) |
-| **Swagger UI** | [ballast-lane-board.azurewebsites.net/swagger](https://ballast-lane-board.azurewebsites.net/swagger) |
+| **Swagger UI** | [ballast-lane-board.azurewebsites.net/api](https://ballast-lane-board.azurewebsites.net/api) |
 | **Health Check** | [ballast-lane-board.azurewebsites.net/health](https://ballast-lane-board.azurewebsites.net/health) |
 
 Sign up at [/signup](https://ballast-lane-board.azurewebsites.net/signup) or use the demo credentials below.
@@ -121,7 +121,7 @@ Sign in via Keycloak at `http://localhost:8080/realms/ballast-lane-board/account
 | `POST` | `/api/auth/sync` | Bearer | Sync last-seen timestamp |
 | `GET` | `/health` | Public | Health check |
 
-**Swagger UI**: `http://localhost:5293/swagger` (dark theme, bearer token support)
+**Swagger UI**: `http://localhost:5293/api` (dark theme, bearer token support)
 
 ---
 

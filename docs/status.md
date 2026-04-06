@@ -11,7 +11,7 @@ The application is live at **[https://ballast-lane-board.azurewebsites.net](http
 | **Angular SPA** | ✅ Running | [ballast-lane-board.azurewebsites.net](https://ballast-lane-board.azurewebsites.net) |
 | **REST API** | ✅ Running | [/health](https://ballast-lane-board.azurewebsites.net/health) |
 | **Keycloak OIDC** | ✅ Running | [/realms/ballast-lane-board/.well-known/openid-configuration](https://ballast-lane-board.azurewebsites.net/realms/ballast-lane-board/.well-known/openid-configuration) |
-| **Swagger UI** | ✅ Available | [/swagger](https://ballast-lane-board.azurewebsites.net/swagger) |
+| **Swagger UI** | ✅ Available | [/api](https://ballast-lane-board.azurewebsites.net/api) |
 
 ---
 
