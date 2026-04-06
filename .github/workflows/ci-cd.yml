@@ -228,7 +228,8 @@ jobs:
 
       - name: Render Compose file with release image
         run: |
-          IMAGE_TO_DEPLOY="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}"
+          TAG="${{ github.ref_name }}"
+          IMAGE_TO_DEPLOY="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${TAG#v}"
           sed "s|__API_IMAGE__|${IMAGE_TO_DEPLOY}|g" .github/azure/docker-compose.appservice.yml > .github/azure/docker-compose.appservice.generated.yml
 
       - name: Azure Login
