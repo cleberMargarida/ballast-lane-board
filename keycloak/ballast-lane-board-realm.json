@@ -21,18 +21,20 @@
         "http://localhost:5293/*",
         "http://localhost:4200/*",
         "http://localhost:8082/*",
-        "http://localhost/*"
+        "http://localhost/*",
+        "https://ballast-lane-board.azurewebsites.net/*"
       ],
       "webOrigins": [
         "http://localhost:5293",
         "http://localhost:4200",
         "http://localhost:8082",
-        "http://localhost"
+        "http://localhost",
+        "https://ballast-lane-board.azurewebsites.net"
       ],
       "protocol": "openid-connect",
       "attributes": {
         "pkce.code.challenge.method": "S256",
-        "post.logout.redirect.uris": "http://localhost:5293/*##http://localhost:4200/*##http://localhost:8082##http://localhost:8082/*##http://localhost/*##http://localhost"
+        "post.logout.redirect.uris": "http://localhost:5293/*##http://localhost:4200/*##http://localhost:8082##http://localhost:8082/*##http://localhost/*##http://localhost##https://ballast-lane-board.azurewebsites.net/*##https://ballast-lane-board.azurewebsites.net"
       },
       "defaultClientScopes": [
         "basic",

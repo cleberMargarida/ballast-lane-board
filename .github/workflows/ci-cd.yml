@@ -226,18 +226,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Render Compose file with release image
+      - name: Render Compose file with release tag
         run: |
           TAG="${{ github.ref_name }}"
-          IMAGE_TO_DEPLOY="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${TAG#v}"
-          sed "s|__API_IMAGE__|${IMAGE_TO_DEPLOY}|g" .github/azure/docker-compose.appservice.yml > .github/azure/docker-compose.appservice.generated.yml
+          TAG="${TAG#v}"
+          sed "s|__TAG__|${TAG}|g" .github/azure/docker-compose.appservice.yml > .github/azure/docker-compose.appservice.generated.yml
+          cat .github/azure/docker-compose.appservice.generated.yml
 
       - name: Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Configure App Service registry and port
+      - name: Configure App Service settings
         run: |
           az webapp config appsettings set \
             --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
@@ -246,7 +247,25 @@ jobs:
             WEBSITES_PORT=8080 \
             DOCKER_REGISTRY_SERVER_URL=https://index.docker.io \
             DOCKER_REGISTRY_SERVER_USERNAME="${{ secrets.DOCKERHUB_USERNAME }}" \
-            DOCKER_REGISTRY_SERVER_PASSWORD="${{ secrets.DOCKERHUB_TOKEN }}"
+            DOCKER_REGISTRY_SERVER_PASSWORD="${{ secrets.DOCKERHUB_TOKEN }}" \
+            ConnectionStrings__DefaultConnection="${{ secrets.DB_CONNECTION_STRING }}" \
+            OpenIdConnect__Authority="http://localhost:8180/realms/ballast-lane-board" \
+            OpenIdConnect__PublicAuthority="https://ballast-lane-board.azurewebsites.net/realms/ballast-lane-board" \
+            OpenIdConnect__Audience="ballast-lane-board-api" \
+            OpenIdConnect__RoleClaimPath="realm_access.roles" \
+            IdentityProvider__AdminUrl="http://localhost:8180" \
+            IdentityProvider__Realm="ballast-lane-board" \
+            IdentityProvider__AdminUser="admin" \
+            IdentityProvider__AdminPassword="${{ secrets.KEYCLOAK_ADMIN_PASSWORD }}" \
+            KC_DB="postgres" \
+            KC_DB_URL="jdbc:postgresql://ballast-lane-board-db.postgres.database.azure.com:5432/keycloak" \
+            KC_DB_USERNAME="postgres" \
+            KC_DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
+            KC_HOSTNAME="https://ballast-lane-board.azurewebsites.net" \
+            KC_HTTP_ENABLED="true" \
+            KC_HTTP_PORT="8180" \
+            KC_HOSTNAME_STRICT="false" \
+            KC_PROXY_HEADERS="xforwarded"
 
       - name: Deploy multi-container configuration
         run: |

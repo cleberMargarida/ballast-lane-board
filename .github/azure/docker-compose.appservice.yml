@@ -1,8 +1,21 @@
 version: "3.8"
 
 services:
-  api:
-    image: __API_IMAGE__
-    restart: always
+  nginx:
+    image: clebermargarida/ballast-lane-board-nginx:__TAG__
     ports:
       - "8080:8080"
+
+  api:
+    image: clebermargarida/ballast-lane-board:__TAG__
+    environment:
+      ASPNETCORE_URLS: "http://+:8081"
+
+  keycloak:
+    image: clebermargarida/ballast-lane-board-keycloak:__TAG__
+    environment:
+      KC_DB: postgres
+      KC_HTTP_PORT: "8180"
+      KC_HTTP_ENABLED: "true"
+      KC_HOSTNAME_STRICT: "false"
+      KC_PROXY_HEADERS: xforwarded
