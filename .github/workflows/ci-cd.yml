@@ -249,11 +249,11 @@ jobs:
             DOCKER_REGISTRY_SERVER_USERNAME="${{ secrets.DOCKERHUB_USERNAME }}" \
             DOCKER_REGISTRY_SERVER_PASSWORD="${{ secrets.DOCKERHUB_TOKEN }}" \
             ConnectionStrings__DefaultConnection="${{ secrets.DB_CONNECTION_STRING }}" \
-            OpenIdConnect__Authority="http://localhost:8180/realms/ballast-lane-board" \
+            OpenIdConnect__Authority="http://keycloak:8180/realms/ballast-lane-board" \
             OpenIdConnect__PublicAuthority="https://ballast-lane-board.azurewebsites.net/realms/ballast-lane-board" \
             OpenIdConnect__Audience="ballast-lane-board-api" \
             OpenIdConnect__RoleClaimPath="realm_access.roles" \
-            IdentityProvider__AdminUrl="http://localhost:8180" \
+            IdentityProvider__AdminUrl="http://keycloak:8180" \
             IdentityProvider__Realm="ballast-lane-board" \
             IdentityProvider__AdminUser="admin" \
             IdentityProvider__AdminPassword="${{ secrets.KEYCLOAK_ADMIN_PASSWORD }}" \
