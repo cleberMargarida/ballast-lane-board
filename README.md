@@ -5,13 +5,9 @@
 [![License](https://img.shields.io/badge/license-unlicensed-lightgrey)](#license)
 [![Coverage](https://img.shields.io/badge/coverage-58.49%25-yellow)](https://github.com/cleberMargarida/ballast-lane-board/actions/runs/24013117103)
 
+<img src="https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21" alt="Ballast Lane Board — Kanban task board">
+
 A full-stack task management application built with **Clean Architecture**, **.NET 10**, **Angular 19 + Tailwind CSS 4**, **PostgreSQL**, and **Keycloak OIDC**.
-
-## Screenshots
-
-| Sign In | Board | Create Task | Status Change |
-|---------|-------|-------------|---------------|
-| ![Sign In](docs/images/sign-in.png) | ![Board](docs/images/board.png) | ![Create Task](docs/images/create-task.png) | ![Move Status](docs/images/move-status.png) |
 
 ---
 
@@ -201,8 +197,6 @@ dotnet build
 
 Workflow file: `.github/workflows/ci-cd.yml`
 
-![CI/CD Pipeline](docs/images/ci-cd-pipeline.png)
-
 ### Pipeline triggers
 
 - Push: `master`, `develop`
@@ -234,6 +228,16 @@ Set these in the App Service configuration so the container can start correctly:
 - `IdentityProvider__AdminPassword`
 
 The deploy job uses `.github/azure/docker-compose.appservice.yml` as the App Service multi-container source and injects the released API image tag automatically.
+
+---
+
+## Screenshots
+
+| Sign In | Board | Create Task | Status Change |
+|---------|-------|-------------|---------------|
+| ![Sign In](docs/images/sign-in.png) | ![Board](docs/images/board.png) | ![Create Task](docs/images/create-task.png) | ![Move Status](docs/images/move-status.png) |
+
+![CI/CD Pipeline](docs/images/ci-cd-pipeline.png)
 
 ---
 
