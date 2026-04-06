@@ -6,7 +6,11 @@ title: Ballast Lane Board
 
 **A full-stack task management platform built with Clean Architecture**
 
-![Ballast Lane Board — Kanban task board](https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21)
+## Screenshots
+
+| Sign In | Board | Create Task | Status Change |
+|---------|-------|-------------|---------------|
+| ![Sign In](images/sign-in.png) | ![Board](images/board.png) | ![Create Task](images/create-task.png) | ![Move Status](images/move-status.png) |
 
 > **Live Demo:** [https://ballast-lane-board.azurewebsites.net](https://ballast-lane-board.azurewebsites.net)
 

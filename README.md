@@ -5,9 +5,13 @@
 [![License](https://img.shields.io/badge/license-unlicensed-lightgrey)](#license)
 [![Coverage](https://img.shields.io/badge/coverage-58.49%25-yellow)](https://github.com/cleberMargarida/ballast-lane-board/actions/runs/24013117103)
 
-<img width="2429" height="1511" alt="image" src="https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21" />
-
 A full-stack task management application built with **Clean Architecture**, **.NET 10**, **Angular 19 + Tailwind CSS 4**, **PostgreSQL**, and **Keycloak OIDC**.
+
+## Screenshots
+
+| Sign In | Board | Create Task | Status Change |
+|---------|-------|-------------|---------------|
+| ![Sign In](docs/images/sign-in.png) | ![Board](docs/images/board.png) | ![Create Task](docs/images/create-task.png) | ![Move Status](docs/images/move-status.png) |
 
 ---
 
@@ -196,6 +200,8 @@ dotnet build
 ## CI/CD (GitHub Actions)
 
 Workflow file: `.github/workflows/ci-cd.yml`
+
+![CI/CD Pipeline](docs/images/ci-cd-pipeline.png)
 
 ### Pipeline triggers
 
