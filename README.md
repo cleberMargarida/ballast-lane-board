@@ -1,4 +1,10 @@
 # Ballast Lane Board — Task Management Platform
+<img width="2429" height="1511" alt="image" src="https://github.com/user-attachments/assets/ce0a6842-64da-461f-9710-45781fb92b21" />
+
+[![.NET CI/CD](https://github.com/cleberMargarida/ballast-lane-board/actions/workflows/ci-cd.yml/badge.svg?branch=master)](https://github.com/cleberMargarida/ballast-lane-board/actions/workflows/ci-cd.yml)
+[![Docker](https://img.shields.io/docker/v/clebermargarida/ballast-lane-board?sort=semver&label=docker)](https://hub.docker.com/r/clebermargarida/ballast-lane-board)
+[![License](https://img.shields.io/badge/license-unlicensed-lightgrey)](#license)
+[![Coverage](https://img.shields.io/badge/coverage-58.49%25-yellow)](https://github.com/cleberMargarida/ballast-lane-board/actions/runs/24013117103)
 
 A full-stack task management application built with **Clean Architecture**, **.NET 10**, **Angular 19 + Tailwind CSS 4**, **PostgreSQL**, and **Keycloak OIDC**.
 
@@ -6,19 +12,18 @@ A full-stack task management application built with **Clean Architecture**, **.N
 
 ## Architecture
 
-```
-HTTP Request
-    ↓
-[Controller](ApplicationService)
-    ↓
-[ApplicationService](ITaskUoW | IUserUoW)
-    ↓ orchestrates
-[Domain Aggregate].Create() → Result<TEntity>
-[Domain Aggregate].Command() → Result
-    ↓ on success
-uow.Repository.Add(entity) + await uow.Commit()
-    ↓
-HTTP Response
+```mermaid
+flowchart TD
+    Request[HTTP Request]
+    Controller[Controller / API Endpoint]
+    Application[Application Service<br/>ITaskUoW | IUserUoW]
+    Domain[Domain Aggregate<br/>Create() / Command()]
+    Persistence[Repository.Add(entity)<br/>await uow.Commit()]
+    Response[HTTP Response]
+
+    Request --> Controller --> Application
+    Application -->|orchestrates| Domain
+    Domain -->|success| Persistence --> Response
 ```
 
 | Layer | Project | Responsibility |
@@ -219,6 +224,12 @@ Set these in the App Service configuration so the container can start correctly:
 - `IdentityProvider__AdminPassword`
 
 The deploy job uses `.github/azure/docker-compose.appservice.yml` as the App Service multi-container source and injects the released API image tag automatically.
+
+---
+
+## License
+
+No license file is currently committed in this repository. Until one is added, treat the codebase as unlicensed / all rights reserved.
 
 ---
 
